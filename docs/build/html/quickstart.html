@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Get started writing technical documentation with Sphinx and publishing to Read the Docs." lang="en" name="description" xml:lang="en" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started with Sphinx &mdash; Sphinx Quick Start Guide  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Sphinx Quick Start Guide’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Sphinx Quick Start Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started with Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-markdown-with-sphinx">Using Markdown with Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-resources">External resources</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx Quick Start Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started with Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="getting-started-with-sphinx">
+<h1>Getting Started with Sphinx<a class="headerlink" href="#getting-started-with-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Sphinx is a powerful documentation generator that
+has many great features for writing technical documentation including:</p>
+<ul class="simple">
+<li><p>Generate web pages, printable PDFs, documents for e-readers (ePub),
+and more all from the same sources</p></li>
+<li><p>You can use reStructuredText or Markdown
+to write documentation</p></li>
+<li><p>An extensive system of cross-referencing code and documentation</p></li>
+<li><p>Syntax highlighted code samples</p></li>
+<li><p>A vibrant ecosystem of first and third-party <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/index.html">extensions</a></p></li>
+</ul>
+<div class="section" id="quick-start">
+<h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<p>Assuming you have Python already, <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">install Sphinx</a></p>
+<p><em>Recommend to use conda to install sphinx.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge sphinx
+
+or
+
+pip install sphinx
+</pre></div>
+</div>
+<p>Create a directory inside your project to hold your docs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/project
+mkdir docs
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> in there:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+sphinx-quickstart
+</pre></div>
+</div>
+<p>This quick start will walk you through creating the basic configuration; in most cases, you
+can just accept the defaults. When it’s done, you’ll have an <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>, a
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and some other files. Add these to revision control.</p>
+<p>Now, edit your <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and add some information about your project.
+Include as much detail as you like (refer to the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText syntax</a>
+or <a class="reference external" href="https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/#id1">this template</a> if you need help). Build them to see how they look:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-markdown-with-sphinx">
+<h2>Using Markdown with Sphinx<a class="headerlink" href="#using-markdown-with-sphinx" title="Permalink to this headline">¶</a></h2>
+<p>You can use Markdown and reStructuredText in the same Sphinx project.
+We support this natively on Read the Docs, and you can do it locally:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install recommonmark
+</pre></div>
+</div>
+<p>Then in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Markdown doesn’t support a lot of the features of Sphinx,
+like inline markup and directives. However, it works for
+basic prose content. reStructuredText is the preferred
+format for technical documentation, please read <a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">this blog post</a>
+for motivation.</p>
+</div>
+</div>
+<div class="section" id="external-resources">
+<h2>External resources<a class="headerlink" href="#external-resources" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Sphinx Quick Start Guide’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Christopher Rodell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

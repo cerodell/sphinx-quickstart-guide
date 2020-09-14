@@ -10,6 +10,8 @@ Welcome to Sphinx Quick Start Guide's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   quickstart
+
 
 
 Indices and tables
