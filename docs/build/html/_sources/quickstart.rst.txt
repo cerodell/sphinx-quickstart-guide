@@ -1,9 +1,13 @@
 Quick start
------------
+==============
 
-Assuming you have Python already, `install Sphinx <https://www.sphinx-doc.org/en/master/usage/installation.html>`_
+Installation 
+--------------
 
-*Recommend to use conda to install sphinx.*
+Lets `install Sphinx! <https://www.sphinx-doc.org/en/master/usage/installation.html>`_
+
+
+I rcommend to use conda to install sphinx but pip works too. 
 
 .. code-block:: bash 
 
@@ -13,46 +17,116 @@ Assuming you have Python already, `install Sphinx <https://www.sphinx-doc.org/en
 
     pip install sphinx
 
-Create a directory inside your project to hold your docs:
+Repo Setup 
+--------------
+
+Make a ``docs`` folder within you repo 
 
 .. code-block:: bash 
 
     cd /path/to/project
     mkdir docs
 
-Run ``sphinx-quickstart`` in there:
+Run ``sphinx-quickstart``:
 
 .. code-block:: bash 
 
     cd docs
     sphinx-quickstart
 
-This quick start will walk you through creating the basic configuration; in most cases, you
-can just accept the defaults. When it's done, you'll have an ``index.rst``, a
-``conf.py`` and some other files. Add these to revision control.
+Enter yes or y for the first question, and fill our project name, your name where appropriate.
 
-Now, edit your ``index.rst`` and add some information about your project.
-Include as much detail as you like (refer to the `reStructuredText syntax <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
-or `this template <https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/#id1>`_ if you need help). Build them to see how they look:
+The last question is asking to use English as the default language. I'll leave that for you to decide.
+
+Here is an exmaple code block
+
+.. code-block:: bash 
+
+    Welcome to the Sphinx 3.2.1 quickstart utility.
+
+    Please enter values for the following settings (just press Enter to
+    accept a default value, if one is given in brackets).
+
+    Selected root path: .
+
+    You have two options for placing the build directory for Sphinx output.
+    Either, you use a directory "_build" within the root path, or you separate
+    "source" and "build" directories within the root path.
+    > Separate source and build directories (y/n) [n]: y
+
+    The project name will occur in several places in the built documentation.
+    > Project name: My Project
+    > Author name(s): My Name
+    > Project release []: 
+
+    If the documents are to be written in a language other than English,
+    you can select a language here by its language code. Sphinx will then
+    translate text that it generates into that language.
+
+    For a list of supported codes, see
+    https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
+    > Project language [en]: 
+
+    Creating file /Users/rodell/test/conf.py.
+    Creating file /Users/rodell/test/index.rst.
+    Creating file /Users/rodell/test/Makefile.
+    Creating file /Users/rodell/test/make.bat.
+
+    Finished: An initial directory structure has been created.
+
+    You should now populate your master file /Users/rodell/test/index.rst and create other documentation
+    source files. Use the Makefile to build the docs, like so:
+    make builder
+    where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
+
+Here is what you docs folder will look like.
+.. code-block:: bash
+
+    docs
+    ├── Makefile
+    ├── build
+    ├── make.bat
+    └── source
+        ├── _static
+        ├── _templates
+        ├── conf.py
+        └── index.rst
+
+
+Now we will do some sneaky (yet simple) set up stuff to make your life much easier. 
+
+
+
+First, lets update the `conf.py`
+    * You can leave it as is but I am going to show you my preferred set up. 
+
+.. code-block:: python 
+
+
+
+
+
+
+
+
+
+
+We are now set up to build a website. Simply run:
 
 .. code-block:: bash 
 
     make html
 
-.. Your ``index.rst`` has been built into ``index.html``
-.. in your documentation output directory (typically ``_build/html/index.html``).
-.. Open this file in your web browser to see your docs.
+And we will have created our first wedpage. 
 
-.. .. .. figure:: /_static/images/first-steps/sphinx-hello-world.png
-.. ..    :figwidth: 500px
-.. ..    :target: /_static/images/first-steps/sphinx-hello-world.png
-.. ..    :align: center
+We will no see a ``source`` folder and ``build`` folder
 
-.. ..    Your Sphinx project is built
+As the names imply the `source` folder is the source directory that sphinx used to build your website. Sphinx places all built content within the `build` folder.
 
-.. Edit your files and rebuild until you like what you see, then commit your changes and push to your public repository.
-.. Once you have Sphinx documentation in a public repository, you can start using Read the Docs
-.. by :doc:`importing your docs </intro/import-guide>`.
+You'll be working in the `source` folder most of the time.
+You will never really need to go into the `build` folder 
+
+
 
 
 Using Markdown with Sphinx
