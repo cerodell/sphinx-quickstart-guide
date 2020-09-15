@@ -186,7 +186,7 @@
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Lets <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">install Sphinx!</a></p>
-<p>I rcommend to use conda to install sphinx but pip works too.</p>
+<p>I recommend using conda to install sphinx but pip works too.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge sphinx
 
 or
@@ -207,7 +207,7 @@ mkdir docs
 sphinx-quickstart
 </pre></div>
 </div>
-<p>Enter yes or y for the first question, and fill our project name, your name where appropriate.</p>
+<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <cite>y</cite> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
 <p>The last question is asking to use English as the default language. I’ll leave that for you to decide.</p>
 <p>Here is an exmaple code block</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx <span class="m">3</span>.2.1 quickstart utility.
@@ -223,8 +223,8 @@ Either, you use a directory <span class="s2">&quot;_build&quot;</span> within th
 &gt; Separate <span class="nb">source</span> and build directories <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>: y
 
 The project name will occur in several places in the built documentation.
-&gt; Project name: My Project
-&gt; Author name<span class="o">(</span>s<span class="o">)</span>: My Name
+&gt; Project name: Sphinx Quickstart Guide
+&gt; Author name<span class="o">(</span>s<span class="o">)</span>: Christopher Rodell
 &gt; Project release <span class="o">[]</span>:
 
 If the documents are to be written in a language other than English,
@@ -235,34 +235,31 @@ For a list of supported codes, see
 https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
 &gt; Project language <span class="o">[</span>en<span class="o">]</span>:
 
-Creating file /Users/rodell/test/conf.py.
-Creating file /Users/rodell/test/index.rst.
-Creating file /Users/rodell/test/Makefile.
-Creating file /Users/rodell/test/make.bat.
+Creating file /Users/rodell/test/docs/source/conf.py.
+Creating file /Users/rodell/test/docs/source/index.rst.
+Creating file /Users/rodell/test/docs/Makefile.
+Creating file /Users/rodell/test/docs/make.bat.
 
 Finished: An initial directory structure has been created.
 
-You should now populate your master file /Users/rodell/test/index.rst and create other documentation
+You should now populate your master file /Users/rodell/test/docs/source/index.rst and create other documentation
 <span class="nb">source</span> files. Use the Makefile to build the docs, like so:
 make builder
 where <span class="s2">&quot;builder&quot;</span> is one of the supported builders, e.g. html, latex or linkcheck.
 </pre></div>
 </div>
-<p>Here is what you docs folder will look like.
-.. code-block:: bash</p>
-<blockquote>
-<div><p>docs
+<p>Here is what you docs folder will look like.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs
 ├── Makefile
 ├── build
 ├── make.bat
-└── source</p>
-<blockquote>
-<div><p>├── _static
-├── _templates
-├── conf.py
-└── index.rst</p>
-</div></blockquote>
-</div></blockquote>
+└── <span class="nb">source</span>
+    ├── _static
+    ├── _templates
+    ├── conf.py
+    └── index.rst
+</pre></div>
+</div>
 <p>Now we will do some sneaky (yet simple) set up stuff to make your life much easier.</p>
 <dl class="simple">
 <dt>First, lets update the <cite>conf.py</cite></dt><dd><ul class="simple">

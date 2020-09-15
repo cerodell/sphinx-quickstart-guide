@@ -7,7 +7,7 @@ Installation
 Lets `install Sphinx! <https://www.sphinx-doc.org/en/master/usage/installation.html>`_
 
 
-I rcommend to use conda to install sphinx but pip works too. 
+I recommend using conda to install sphinx but pip works too. 
 
 .. code-block:: bash 
 
@@ -34,7 +34,7 @@ Run ``sphinx-quickstart``:
     cd docs
     sphinx-quickstart
 
-Enter yes or y for the first question, and fill our project name, your name where appropriate.
+Enter ``yes`` or `y` for the first question, and fill out ``project name`` and ``your name`` where appropriate.
 
 The last question is asking to use English as the default language. I'll leave that for you to decide.
 
@@ -55,8 +55,8 @@ Here is an exmaple code block
     > Separate source and build directories (y/n) [n]: y
 
     The project name will occur in several places in the built documentation.
-    > Project name: My Project
-    > Author name(s): My Name
+    > Project name: Sphinx Quickstart Guide
+    > Author name(s): Christopher Rodell
     > Project release []: 
 
     If the documents are to be written in a language other than English,
@@ -67,19 +67,20 @@ Here is an exmaple code block
     https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
     > Project language [en]: 
 
-    Creating file /Users/rodell/test/conf.py.
-    Creating file /Users/rodell/test/index.rst.
-    Creating file /Users/rodell/test/Makefile.
-    Creating file /Users/rodell/test/make.bat.
+    Creating file /Users/rodell/test/docs/source/conf.py.
+    Creating file /Users/rodell/test/docs/source/index.rst.
+    Creating file /Users/rodell/test/docs/Makefile.
+    Creating file /Users/rodell/test/docs/make.bat.
 
     Finished: An initial directory structure has been created.
 
-    You should now populate your master file /Users/rodell/test/index.rst and create other documentation
+    You should now populate your master file /Users/rodell/test/docs/source/index.rst and create other documentation
     source files. Use the Makefile to build the docs, like so:
     make builder
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
 Here is what you docs folder will look like.
+
 .. code-block:: bash
 
     docs
