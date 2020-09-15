@@ -1,27 +1,47 @@
 Quick Start
 ==============
 
-This a quick guide showing you how:
+This a quick guide showing:
 
 #.  :ref:`How to Install Sphinx <Installation>`
-#.  :ref:`Setting up your Repository <Repo Setup>`
-#.  :ref:`Connect docs to GitHub Pages <Github Pages>`
+#.  :ref:`How to set up your Repository <Repo Setup>`
+#.  :ref:`How to connect docs to GitHub Pages <Github Pages>`
 
 Installation 
 --------------
 
-Lets `install Sphinx! <https://www.sphinx-doc.org/en/master/usage/installation.html>`_
+Lets install `Sphinx! <https://www.sphinx-doc.org/en/master/usage/installation.html>`_
 
 
-I recommend using conda to install sphinx but pip works too. 
+You can install sphinx with either conda or pip. 
+
+If you are using conda (which i recommend) I have added a file called ``wfrt.yml``
+You can simply run the following command which will install and a conda environment containing all the required packages for this user guide.
+* The wfrt env is a very stripped down env and I promise it won't be added clutter to your machine
+
+.. code-block:: bash
+
+    conda env create -f wfrt.yml
+
+If you dont want a new conda env
+
+... code-block:: bash
+    conda install -c conda-forge install sphinx
+    conda install -c conda-forge install recommonmark
+    conda install -c conda-forge install sphinx-markdown-tables
+    conda install -c conda-forge install sphinxcontrib-inlinesyntaxhighlight
+    conda install -c conda-forge install nbsphinx
+    
+Or if you like pip 
 
 .. code-block:: bash 
 
-    conda install -c conda-forge sphinx
-
-    or
-
     pip install sphinx
+    pip install recommonmark
+    pip install sphinx-markdown-tables
+    pip install sphinxcontrib-inlinesyntaxhighlight
+    pip install nbsphinx
+
 
 Repo Setup 
 --------------
@@ -116,6 +136,7 @@ First, we will add a ``.nojekyll`` file to the docs directory
 Second lets add an index.html file that contian a simple meta tag
  * The meta tage will redirect your to diffenrt index.html in you build folder.
  * Doing this make life much easier as you can keep everything nice and clean with your soruce folder. 
+
 
 
 First, lets update the `conf.py`
