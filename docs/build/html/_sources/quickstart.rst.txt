@@ -5,7 +5,7 @@ This a quick guide showing you how:
 
 #.  :ref:`How to Install Sphinx <Installation>`
 #.  :ref:`Setting up your Repository <Repo Setup>`
-#.  :ref:`Connect docs to GitHub Pages <GitHub Pages>`
+#.  :ref:`Connect docs to GitHub Pages <Github Pages>`
 
 Installation 
 --------------
@@ -85,7 +85,7 @@ Here is an exmaple code block of each question youll be asked:
     make builder
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
-Here is what you docs folder will look like if you followed the instruction above.
+This is what your docs folder will look like if you followed the instruction above.
 
 .. code-block:: bash
 
@@ -102,19 +102,20 @@ Here is what you docs folder will look like if you followed the instruction abov
 Sneaky Tricks 
 +++++++++++++++
 
-Now we will do some sneaky (yet simple) set up stuff to make your life much easier. 
+Now we will do two sneaky (yet simple) tricks to make your life much easier. 
 
 First, we will add a ``.nojekyll`` file to the docs directory  
 
     * I dont fully understand what this does other than it make things work! 
-    * If you want to learn go here `<https://github.com/vercel/next.js/issues/2029>`_ 
+    * If you want to learn what it does go here `<https://github.com/vercel/next.js/issues/2029>`_ 
 
 .. code-block:: bash
 
     touch .nojekyll
     
-Second lets add an index.html file that will redirect your to the index.html in you build folder.
-    * this make life much easier as you can keep everything nice and clean with your soruce folder and 
+Second lets add an index.html file that contian a simple meta tag
+ * The meta tage will redirect your to diffenrt index.html in you build folder.
+ * Doing this make life much easier as you can keep everything nice and clean with your soruce folder. 
 
 
 First, lets update the `conf.py`
