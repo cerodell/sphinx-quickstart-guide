@@ -302,9 +302,23 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 <dl class="simple">
 <dt>Second lets add an index.html file that contian a simple meta tag</dt><dd><ul class="simple">
 <li><p>The meta tage will redirect your to diffenrt index.html in you build folder.</p></li>
-<li><p>Doing this make life much easier as you can keep everything nice and clean with your soruce folder.</p></li>
+<li><p>Doing this makes life much easier as you can keep everything nice and clean within your soruce folder.</p></li>
 </ul>
 </dd>
+</dl>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch index.html
+</pre></div>
+</div>
+<p>copy the following meta tag</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;0; url=./build/html/index.html&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>and past into index.html</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi index.html
+</pre></div>
+</div>
+<p>Horray we are making head way!</p>
+<dl class="simple">
 <dt>First, lets update the <cite>conf.py</cite></dt><dd><ul class="simple">
 <li><p>You can leave it as is but I am going to show you my preferred set up.</p></li>
 </ul>

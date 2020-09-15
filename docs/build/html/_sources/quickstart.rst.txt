@@ -135,7 +135,26 @@ First, we will add a ``.nojekyll`` file to the docs directory
     
 Second lets add an index.html file that contian a simple meta tag
  * The meta tage will redirect your to diffenrt index.html in you build folder.
- * Doing this make life much easier as you can keep everything nice and clean with your soruce folder. 
+ * Doing this makes life much easier as you can keep everything nice and clean within your soruce folder. 
+
+.. code-block:: bash
+
+    touch index.html
+
+copy the following meta tag 
+
+.. code-block:: html
+
+    <meta http-equiv="refresh" content="0; url=./build/html/index.html" />
+
+and past into index.html
+
+.. code-block:: bash
+
+    vi index.html
+    
+Horray we are making head way! 
+
 
 
 
