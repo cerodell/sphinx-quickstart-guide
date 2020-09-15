@@ -27,7 +27,7 @@ author = 'Christopher Rodell'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', \
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.autosectionlabel', \
     'sphinx.ext.napoleon', 'sphinx_automodapi.automodapi', 'recommonmark', \
         'sphinx_markdown_tables', 'sphinxcontrib.inlinesyntaxhighlight', \
             'nbsphinx', 'sphinx.ext.mathjax']

@@ -1,9 +1,9 @@
-Quick start
+Quick Start
 ==============
 
 This a quick guide showing you how:
 
-#.  ref::`Install Sphinx <quickstart/quick-start:Installation>`
+#.  :ref:`How to Install Sphinx <Installation>`
 #.  Set up your repository
 #.  Connect docs to GitHub Pages
 
