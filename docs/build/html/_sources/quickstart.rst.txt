@@ -4,8 +4,8 @@ Quick Start
 This a quick guide showing you how:
 
 #.  :ref:`How to Install Sphinx <Installation>`
-#.  Set up your repository
-#.  Connect docs to GitHub Pages
+#.  :ref:`Setting up your Repository <Repo Setup>`
+#.  :ref:`Connect docs to GitHub Pages <GitHub Pages>`
 
 Installation 
 --------------
@@ -147,6 +147,8 @@ You'll be working in the `source` folder most of the time.
 You will never really need to go into the `build` folder 
 
 
+GitHub Pages
+--------------
 
 
 Using Markdown with Sphinx
