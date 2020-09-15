@@ -87,7 +87,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#repo-setup">Repo Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repo-setup">Repo Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sneaky-tricks">Sneaky Tricks</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#using-markdown-with-sphinx">Using Markdown with Sphinx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#external-resources">External resources</a></li>
 </ul>
@@ -183,6 +186,12 @@
 </style>
 <div class="section" id="quick-start">
 <h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>This a quick guide showing you how:</p>
+<ol class="arabic simple">
+<li><p>ref::<cite>Install Sphinx &lt;quickstart/quick-start:Installation&gt;</cite></p></li>
+<li><p>Set up your repository</p></li>
+<li><p>Connect docs to GitHub Pages</p></li>
+</ol>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Lets <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">install Sphinx!</a></p>
@@ -197,7 +206,7 @@ pip install sphinx
 </div>
 <div class="section" id="repo-setup">
 <h2>Repo Setup<a class="headerlink" href="#repo-setup" title="Permalink to this headline">¶</a></h2>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder within you repo</p>
+<p>Make a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder within your repo</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/project
 mkdir docs
 </pre></div>
@@ -207,9 +216,9 @@ mkdir docs
 sphinx-quickstart
 </pre></div>
 </div>
-<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <cite>y</cite> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
+<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
 <p>The last question is asking to use English as the default language. I’ll leave that for you to decide.</p>
-<p>Here is an exmaple code block</p>
+<p>Here is an exmaple code block of each question youll be asked:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx <span class="m">3</span>.2.1 quickstart utility.
 
 Please enter values <span class="k">for</span> the following settings <span class="o">(</span>just press Enter to
@@ -248,7 +257,7 @@ make builder
 where <span class="s2">&quot;builder&quot;</span> is one of the supported builders, e.g. html, latex or linkcheck.
 </pre></div>
 </div>
-<p>Here is what you docs folder will look like.</p>
+<p>Here is what you docs folder will look like if you followed the instruction above.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs
 ├── Makefile
 ├── build
@@ -260,8 +269,24 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
     └── index.rst
 </pre></div>
 </div>
+<div class="section" id="sneaky-tricks">
+<h3>Sneaky Tricks<a class="headerlink" href="#sneaky-tricks" title="Permalink to this headline">¶</a></h3>
 <p>Now we will do some sneaky (yet simple) set up stuff to make your life much easier.</p>
+<p>First, we will add a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file to the docs directory</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>I dont fully understand what this does other than it make things work!</p></li>
+<li><p>If you want to learn go here <a class="reference external" href="https://github.com/vercel/next.js/issues/2029">https://github.com/vercel/next.js/issues/2029</a></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch .nojekyll
+</pre></div>
+</div>
 <dl class="simple">
+<dt>Second lets add an index.html file that will redirect your to the index.html in you build folder.</dt><dd><ul class="simple">
+<li><p>this make life much easier as you can keep everything nice and clean with your soruce folder and</p></li>
+</ul>
+</dd>
 <dt>First, lets update the <cite>conf.py</cite></dt><dd><ul class="simple">
 <li><p>You can leave it as is but I am going to show you my preferred set up.</p></li>
 </ul>
@@ -279,6 +304,7 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 <p>As the names imply the <cite>source</cite> folder is the source directory that sphinx used to build your website. Sphinx places all built content within the <cite>build</cite> folder.</p>
 <p>You’ll be working in the <cite>source</cite> folder most of the time.
 You will never really need to go into the <cite>build</cite> folder</p>
+</div>
 </div>
 <div class="section" id="using-markdown-with-sphinx">
 <h2>Using Markdown with Sphinx<a class="headerlink" href="#using-markdown-with-sphinx" title="Permalink to this headline">¶</a></h2>

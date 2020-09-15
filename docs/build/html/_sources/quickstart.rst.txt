@@ -1,6 +1,12 @@
 Quick start
 ==============
 
+This a quick guide showing you how:
+
+#.  ref::`Install Sphinx <quickstart/quick-start:Installation>`
+#.  Set up your repository
+#.  Connect docs to GitHub Pages
+
 Installation 
 --------------
 
@@ -20,7 +26,7 @@ I recommend using conda to install sphinx but pip works too.
 Repo Setup 
 --------------
 
-Make a ``docs`` folder within you repo 
+Make a ``docs`` folder within your repo 
 
 .. code-block:: bash 
 
@@ -34,11 +40,11 @@ Run ``sphinx-quickstart``:
     cd docs
     sphinx-quickstart
 
-Enter ``yes`` or `y` for the first question, and fill out ``project name`` and ``your name`` where appropriate.
+Enter ``yes`` or ``y`` for the first question, and fill out ``project name`` and ``your name`` where appropriate.
 
 The last question is asking to use English as the default language. I'll leave that for you to decide.
 
-Here is an exmaple code block
+Here is an exmaple code block of each question youll be asked:
 
 .. code-block:: bash 
 
@@ -79,7 +85,7 @@ Here is an exmaple code block
     make builder
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
-Here is what you docs folder will look like.
+Here is what you docs folder will look like if you followed the instruction above.
 
 .. code-block:: bash
 
@@ -93,9 +99,22 @@ Here is what you docs folder will look like.
         ├── conf.py
         └── index.rst
 
+Sneaky Tricks 
++++++++++++++++
 
 Now we will do some sneaky (yet simple) set up stuff to make your life much easier. 
 
+First, we will add a ``.nojekyll`` file to the docs directory  
+
+    * I dont fully understand what this does other than it make things work! 
+    * If you want to learn go here `<https://github.com/vercel/next.js/issues/2029>`_ 
+
+.. code-block:: bash
+
+    touch .nojekyll
+    
+Second lets add an index.html file that will redirect your to the index.html in you build folder.
+    * this make life much easier as you can keep everything nice and clean with your soruce folder and 
 
 
 First, lets update the `conf.py`
