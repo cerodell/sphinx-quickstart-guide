@@ -1,4 +1,4 @@
-How build documentation using Sphinx
+How to build documentation with Sphinx
 =========================================
 
 What is Sphinx?

@@ -121,8 +121,8 @@ First, we will add a ``.nojekyll`` file to the docs directory
     touch .nojekyll
     
 Second let's add an index.html file that contains a simple meta tag
- * The meta tage will redirect githup pages to your sites main index.html in your build folder.
- * I like doing this a it makes life much easier as you can keep everything nice and clean within your soruce folder. 
+ * The meta tage will redirect GitHub Pages to your build folder where your websites main index.html lives.
+ * I like doing this as you can keep everything within your soruce folder. 
 
 .. code-block:: bash
 
