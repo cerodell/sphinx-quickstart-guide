@@ -113,7 +113,8 @@ In the ``docs/`` directory add the following two files.
 
 First, we will add a ``.nojekyll`` file to the docs directory  
 
-    * I dont fully understand what this does other than it make things work! 
+
+    * This is an empty file and I dont fully understand what it does other than it make things work! 
     * If you want to learn what it does go here `<https://github.com/vercel/next.js/issues/2029>`_ 
 
 .. code-block:: bash
