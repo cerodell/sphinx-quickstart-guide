@@ -13,5 +13,10 @@ If you arent already, go to the ``docs`` folder and simply run:
 
 Congrats! The website has been built :)
 
-Let's go to `GitHub <github.com>`_  and publish our documentation page. 
+Let's push our work to `GitHub <github.com>`_ so we can publish our website.
 
+.. code-block:: bash 
+
+    git add .
+    git commit -m "added docs"
+    git push
