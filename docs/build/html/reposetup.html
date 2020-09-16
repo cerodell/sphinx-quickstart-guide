@@ -250,6 +250,27 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
     └── index.rst
 </pre></div>
 </div>
+<p>We will now see a  some files along with a <code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">build</span></code> folder</p>
+<blockquote>
+<div><ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">source</span></code> folder is the source directory that sphinx uses to build your website.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This is where you will be working most of the time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is the configuration script sphinx uses to build the website. We will discuss this in detail later</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> is the master document to serve as a welcome page, and the root of the website</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">build</span></code> folder is the directory where sphinx will place your website’s content.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>You dont go here</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 <div class="section" id="sneaky-tricks">
 <h2>Sneaky Tricks<a class="headerlink" href="#sneaky-tricks" title="Permalink to this headline">¶</a></h2>
 <p>Now we will do two sneaky (yet simple) tricks to make your life much easier.</p>
@@ -265,8 +286,8 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 </div>
 <dl class="simple">
 <dt>Second let’s add an index.html file that contains a simple meta tag</dt><dd><ul class="simple">
-<li><p>The meta tage will redirect your to diffenrt index.html in you build folder.</p></li>
-<li><p>Doing this makes life much easier as you can keep everything nice and clean within your soruce folder.</p></li>
+<li><p>The meta tage will redirect githup pages to your sites main index.html in your build folder.</p></li>
+<li><p>I like doing this a it makes life much easier as you can keep everything nice and clean within your soruce folder.</p></li>
 </ul>
 </dd>
 </dl>
@@ -281,7 +302,7 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi index.html
 </pre></div>
 </div>
-<p>Horray we are making head way!</p>
+<p>Horray we are making head way! Lets build a website!!!</p>
 </div>
 </div>
 

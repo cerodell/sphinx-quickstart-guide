@@ -75,6 +75,19 @@ This is what your docs folder will look like if you followed the instruction abo
         ├── conf.py
         └── index.rst
 
+We will now see a  some files along with a ``source`` and ``build`` folder
+
+    * The ``source`` folder is the source directory that sphinx uses to build your website.
+
+        - This is where you will be working most of the time
+        - ``conf.py`` is the configuration script sphinx uses to build the website. We will discuss this in detail later
+        - ``index.rst`` is the master document to serve as a welcome page, and the root of the website
+
+    * The ``build`` folder is the directory where sphinx will place your website's content.
+
+        - You dont go here
+
+
 Sneaky Tricks 
 ---------------
 
@@ -90,8 +103,8 @@ First, we will add a ``.nojekyll`` file to the docs directory
     touch .nojekyll
     
 Second let's add an index.html file that contains a simple meta tag
- * The meta tage will redirect your to diffenrt index.html in you build folder.
- * Doing this makes life much easier as you can keep everything nice and clean within your soruce folder. 
+ * The meta tage will redirect githup pages to your sites main index.html in your build folder.
+ * I like doing this a it makes life much easier as you can keep everything nice and clean within your soruce folder. 
 
 .. code-block:: bash
 
@@ -109,4 +122,4 @@ and past into index.html
 
     vi index.html
     
-Horray we are making head way! 
+Horray we are making head way! Lets build a website!!!
