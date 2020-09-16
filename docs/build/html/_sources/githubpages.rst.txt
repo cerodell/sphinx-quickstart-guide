@@ -3,12 +3,18 @@ GitHub Pages
 
 On your `GitHub <https://github.com/>`_ account. Go to the project repository where you have added the docs folder. 
 
+Settings
+---------------
+
 Click Settings
 
 .. figure:: _static/img/git-settings.png
     :alt: alternate text
     :width: 800
     :align: center
+
+Source
+--------
 
 Scroll down to GitHub Page and under source change ``None`` to ``master`` ...
 
@@ -17,6 +23,8 @@ Scroll down to GitHub Page and under source change ``None`` to ``master`` ...
     :width: 800
     :align: center
 
+Folder
+-------
 
 ...and   change ``root/`` folder to ``docs/`` folder
 
@@ -25,6 +33,9 @@ Scroll down to GitHub Page and under source change ``None`` to ``master`` ...
     :width: 800
     :align: center 
 
+
+Save
+------
 
 Click Save
 

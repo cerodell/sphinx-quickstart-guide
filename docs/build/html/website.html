@@ -89,7 +89,11 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reposetup.html">Repo Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Build a Website</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build a Website</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#make-html">Make HTML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push-repo">Push Repo</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
@@ -186,16 +190,22 @@
 <div class="section" id="build-a-website">
 <h1>Build a Website<a class="headerlink" href="#build-a-website" title="Permalink to this headline">¶</a></h1>
 <p>We are now ready to build our first website using sphinx!</p>
+<div class="section" id="make-html">
+<h2>Make HTML<a class="headerlink" href="#make-html" title="Permalink to this headline">¶</a></h2>
 <p>If you arent already, go to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder and simply run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
 </pre></div>
 </div>
 <p>Congrats! The website has been built :)</p>
+</div>
+<div class="section" id="push-repo">
+<h2>Push Repo<a class="headerlink" href="#push-repo" title="Permalink to this headline">¶</a></h2>
 <p>Let’s push our work to <a class="reference external" href="github.com">GitHub</a> so we can publish our website.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
 git commit -m <span class="s2">&quot;added docs&quot;</span>
 git push
 </pre></div>
+</div>
 </div>
 </div>
 
