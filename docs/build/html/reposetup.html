@@ -187,18 +187,39 @@
 </style>
 <div class="section" id="repo-setup">
 <h1>Repo Setup<a class="headerlink" href="#repo-setup" title="Permalink to this headline">¶</a></h1>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder within your repo</p>
+<p>In your porjects repository make a folder called <code class="docutils literal notranslate"><span class="pre">docs</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/project
 mkdir docs
 </pre></div>
 </div>
-<p>Run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
-sphinx-quickstart
+<p>Now head into the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs/
 </pre></div>
 </div>
-<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
-<p>The last question is asking to use English as the default language. I’ll leave that for you to decide.</p>
+<dl>
+<dt>We are now going to run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> inside the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder.</dt><dd><ul>
+<li><p>This will ask you a few questions</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Either, you use a directory <code class="docutils literal notranslate"><span class="pre">_build</span></code> within the root path, or you separate <code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">build</span></code> directories within the root path.</p></li>
+<li><p>Project name:</p></li>
+<li><p>Author name(s):</p></li>
+<li><p>Project release []:</p></li>
+<li><p>Project language [en]:</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please answer yes to the first question by typing <code class="docutils literal notranslate"><span class="pre">y</span></code> than enter. You must say yes to this question for the rest of this quick start guide to function correctly. Answer the remaining questions however you would like.</p>
+</div>
+<p>Lets run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
 <p>Here is an exmaple code block of each question youll be asked:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx <span class="m">3</span>.2.1 quickstart utility.
 
@@ -258,7 +279,7 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 <div><ul class="simple">
 <li><p>This is where you will be working most of the time</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conf.py</span></code> is the configuration script sphinx uses to build the website. We will discuss this in detail later</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> is the master document to serve as a welcome page, and the root of the website</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> is the master document to serve as a welcome page, and the root of the website. We will also, discuss this in detail later</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -274,6 +295,7 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 <div class="section" id="sneaky-tricks">
 <h2>Sneaky Tricks<a class="headerlink" href="#sneaky-tricks" title="Permalink to this headline">¶</a></h2>
 <p>Now we will do two sneaky (yet simple) tricks to make your life much easier.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory add the following two files.</p>
 <p>First, we will add a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file to the docs directory</p>
 <blockquote>
 <div><ul class="simple">
@@ -300,6 +322,7 @@ where <span class="s2">&quot;builder&quot;</span> is one of the supported builde
 </div>
 <p>and past into index.html</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi index.html
+<span class="c1">## past meta tage and save</span>
 </pre></div>
 </div>
 <p>Horray we are making head way! Lets build a website!!!</p>

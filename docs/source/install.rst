@@ -6,7 +6,7 @@ Lets install `Sphinx! <https://www.sphinx-doc.org/en/master/usage/installation.h
 
 You can install sphinx with either conda or pip. 
 
-If you are using conda (which i recommend) I have added a file called ``wfrt.yml``
+If you are using conda (which I recommend) I have added a file called ``wfrt.yml``
 You can simply run the following command which will install a conda environment containing all the required packages for this user guide.
     
     * The wfrt env is a very stripped down env and I promise it won't be added clutter to your machine
@@ -18,7 +18,7 @@ You can simply run the following command which will install a conda environment 
 
 If you dont want a new conda env
 
-... code-block:: bash
+.. code-block:: bash
 
     conda install -c conda-forge install sphinx
     conda install -c conda-forge install recommonmark

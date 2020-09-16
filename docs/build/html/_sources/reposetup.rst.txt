@@ -2,23 +2,39 @@
 Repo Setup 
 =============
 
-Make a ``docs`` folder within your repo 
+In your porjects repository make a folder called ``docs`` 
 
 .. code-block:: bash 
 
     cd /path/to/project
     mkdir docs
 
-Run ``sphinx-quickstart``:
+Now head into the ``docs/`` folder
+
+.. code-block:: bash
+
+    cd docs/
+
+We are now going to run ``sphinx-quickstart`` inside the ``docs`` folder.
+    * This will ask you a few questions
+
+        #. Either, you use a directory ``_build`` within the root path, or you separate ``source`` and ``build`` directories within the root path.
+        #. Project name:
+        #. Author name(s):
+        #. Project release []:
+        #. Project language [en]:
+
+
+.. important::
+    Please answer yes to the first question by typing ``y`` than enter. You must say yes to this question for the rest of this quick start guide to function correctly. Answer the remaining questions however you would like. 
+
+
+Lets run ``sphinx-quickstart`` by:
 
 .. code-block:: bash 
 
-    cd docs
-    sphinx-quickstart
+   sphinx-quickstart
 
-Enter ``yes`` or ``y`` for the first question, and fill out ``project name`` and ``your name`` where appropriate.
-
-The last question is asking to use English as the default language. I'll leave that for you to decide.
 
 Here is an exmaple code block of each question youll be asked:
 
@@ -81,7 +97,7 @@ We will now see a  some files along with a ``source`` and ``build`` folder
 
         - This is where you will be working most of the time
         - ``conf.py`` is the configuration script sphinx uses to build the website. We will discuss this in detail later
-        - ``index.rst`` is the master document to serve as a welcome page, and the root of the website
+        - ``index.rst`` is the master document to serve as a welcome page, and the root of the website. We will also, discuss this in detail later
 
     * The ``build`` folder is the directory where sphinx will place your website's content.
 
@@ -92,6 +108,8 @@ Sneaky Tricks
 ---------------
 
 Now we will do two sneaky (yet simple) tricks to make your life much easier. 
+
+In the ``docs/`` directory add the following two files. 
 
 First, we will add a ``.nojekyll`` file to the docs directory  
 
@@ -121,5 +139,6 @@ and past into index.html
 .. code-block:: bash
 
     vi index.html
+    ## past meta tage and save
     
 Horray we are making head way! Lets build a website!!!
