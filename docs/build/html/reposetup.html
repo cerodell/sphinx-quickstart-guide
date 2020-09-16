@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Repo Setup &mdash; Sphinx Quick Start Guide  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Build a Website" href="website.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Sphinx Quick Start Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Repo Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sneaky-tricks">Sneaky Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx Quick Start Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Repo Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/reposetup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="repo-setup">
+<h1>Repo Setup<a class="headerlink" href="#repo-setup" title="Permalink to this headline">¶</a></h1>
+<p>Make a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder within your repo</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/project
+mkdir docs
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+sphinx-quickstart
+</pre></div>
+</div>
+<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
+<p>The last question is asking to use English as the default language. I’ll leave that for you to decide.</p>
+<p>Here is an exmaple code block of each question youll be asked:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx <span class="m">3</span>.2.1 quickstart utility.
+
+Please enter values <span class="k">for</span> the following settings <span class="o">(</span>just press Enter to
+accept a default value, <span class="k">if</span> one is given in brackets<span class="o">)</span>.
+
+Selected root path: .
+
+You have two options <span class="k">for</span> placing the build directory <span class="k">for</span> Sphinx output.
+Either, you use a directory <span class="s2">&quot;_build&quot;</span> within the root path, or you separate
+<span class="s2">&quot;source&quot;</span> and <span class="s2">&quot;build&quot;</span> directories within the root path.
+&gt; Separate <span class="nb">source</span> and build directories <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>: y
+
+The project name will occur in several places in the built documentation.
+&gt; Project name: Sphinx Quickstart Guide
+&gt; Author name<span class="o">(</span>s<span class="o">)</span>: Christopher Rodell
+&gt; Project release <span class="o">[]</span>:
+
+If the documents are to be written in a language other than English,
+you can <span class="k">select</span> a language here by its language code. Sphinx will <span class="k">then</span>
+translate text that it generates into that language.
+
+For a list of supported codes, see
+https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
+&gt; Project language <span class="o">[</span>en<span class="o">]</span>:
+
+Creating file /Users/rodell/test/docs/source/conf.py.
+Creating file /Users/rodell/test/docs/source/index.rst.
+Creating file /Users/rodell/test/docs/Makefile.
+Creating file /Users/rodell/test/docs/make.bat.
+
+Finished: An initial directory structure has been created.
+
+You should now populate your master file /Users/rodell/test/docs/source/index.rst and create other documentation
+<span class="nb">source</span> files. Use the Makefile to build the docs, like so:
+make builder
+where <span class="s2">&quot;builder&quot;</span> is one of the supported builders, e.g. html, latex or linkcheck.
+</pre></div>
+</div>
+<p>This is what your docs folder will look like if you followed the instruction above.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs
+├── Makefile
+├── build
+├── make.bat
+└── <span class="nb">source</span>
+    ├── _static
+    ├── _templates
+    ├── conf.py
+    └── index.rst
+</pre></div>
+</div>
+<div class="section" id="sneaky-tricks">
+<h2>Sneaky Tricks<a class="headerlink" href="#sneaky-tricks" title="Permalink to this headline">¶</a></h2>
+<p>Now we will do two sneaky (yet simple) tricks to make your life much easier.</p>
+<p>First, we will add a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file to the docs directory</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>I dont fully understand what this does other than it make things work!</p></li>
+<li><p>If you want to learn what it does go here <a class="reference external" href="https://github.com/vercel/next.js/issues/2029">https://github.com/vercel/next.js/issues/2029</a></p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch .nojekyll
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Second let’s add an index.html file that contains a simple meta tag</dt><dd><ul class="simple">
+<li><p>The meta tage will redirect your to diffenrt index.html in you build folder.</p></li>
+<li><p>Doing this makes life much easier as you can keep everything nice and clean within your soruce folder.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch index.html
+</pre></div>
+</div>
+<p>copy the following meta tag</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;0; url=./build/html/index.html&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>and past into index.html</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi index.html
+</pre></div>
+</div>
+<p>Horray we are making head way!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="website.html" class="btn btn-neutral float-right" title="Build a Website" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Christopher Rodell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

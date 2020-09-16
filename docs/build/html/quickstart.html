@@ -38,7 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="A quick and dirty guide to building documentation using Sphinx" href="index.html" /> 
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Quick start guide to building documentation using Sphinx" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,17 +86,13 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#repo-setup">Repo Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sneaky-tricks">Sneaky Tricks</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#github-pages">GitHub Pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-markdown-with-sphinx">Using Markdown with Sphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#external-resources">External resources</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reposetup.html">Repo Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
 
             
@@ -187,183 +184,12 @@
 </style>
 <div class="section" id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
-<p>This a quick guide showing:</p>
+<p>A quick start guide showing:</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="#installation"><span class="std std-ref">How to Install Sphinx</span></a></p></li>
-<li><p><a class="reference internal" href="#repo-setup"><span class="std std-ref">How to set up your Repository</span></a></p></li>
-<li><p><a class="reference internal" href="#github-pages"><span class="std std-ref">How to connect docs to GitHub Pages</span></a></p></li>
+<li><p><a class="reference internal" href="install.html#installation"><span class="std std-ref">How to Install Sphinx</span></a></p></li>
+<li><p><a class="reference internal" href="reposetup.html#repo-setup"><span class="std std-ref">How to set up your Repository</span></a></p></li>
+<li><p><a class="reference internal" href="githubpages.html#github-pages"><span class="std std-ref">How to connect docs to GitHub Pages</span></a></p></li>
 </ol>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Lets install <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Sphinx!</a></p>
-<p>You can install sphinx with either conda or pip.</p>
-<p>If you are using conda (which i recommend) I have added a file called <code class="docutils literal notranslate"><span class="pre">wfrt.yml</span></code>
-You can simply run the following command which will install and a conda environment containing all the required packages for this user guide.
-* The wfrt env is a very stripped down env and I promise it won’t be added clutter to your machine</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f wfrt.yml
-</pre></div>
-</div>
-<p>If you dont want a new conda env</p>
-<dl class="simple">
-<dt>… code-block:: bash</dt><dd><p>conda install -c conda-forge install sphinx
-conda install -c conda-forge install recommonmark
-conda install -c conda-forge install sphinx-markdown-tables
-conda install -c conda-forge install sphinxcontrib-inlinesyntaxhighlight
-conda install -c conda-forge install nbsphinx</p>
-</dd>
-</dl>
-<p>Or if you like pip</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx
-pip install recommonmark
-pip install sphinx-markdown-tables
-pip install sphinxcontrib-inlinesyntaxhighlight
-pip install nbsphinx
-</pre></div>
-</div>
-</div>
-<div class="section" id="repo-setup">
-<h2>Repo Setup<a class="headerlink" href="#repo-setup" title="Permalink to this headline">¶</a></h2>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder within your repo</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /path/to/project
-mkdir docs
-</pre></div>
-</div>
-<p>Run <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
-sphinx-quickstart
-</pre></div>
-</div>
-<p>Enter <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code> for the first question, and fill out <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">name</span></code> where appropriate.</p>
-<p>The last question is asking to use English as the default language. I’ll leave that for you to decide.</p>
-<p>Here is an exmaple code block of each question youll be asked:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx <span class="m">3</span>.2.1 quickstart utility.
-
-Please enter values <span class="k">for</span> the following settings <span class="o">(</span>just press Enter to
-accept a default value, <span class="k">if</span> one is given in brackets<span class="o">)</span>.
-
-Selected root path: .
-
-You have two options <span class="k">for</span> placing the build directory <span class="k">for</span> Sphinx output.
-Either, you use a directory <span class="s2">&quot;_build&quot;</span> within the root path, or you separate
-<span class="s2">&quot;source&quot;</span> and <span class="s2">&quot;build&quot;</span> directories within the root path.
-&gt; Separate <span class="nb">source</span> and build directories <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>: y
-
-The project name will occur in several places in the built documentation.
-&gt; Project name: Sphinx Quickstart Guide
-&gt; Author name<span class="o">(</span>s<span class="o">)</span>: Christopher Rodell
-&gt; Project release <span class="o">[]</span>:
-
-If the documents are to be written in a language other than English,
-you can <span class="k">select</span> a language here by its language code. Sphinx will <span class="k">then</span>
-translate text that it generates into that language.
-
-For a list of supported codes, see
-https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
-&gt; Project language <span class="o">[</span>en<span class="o">]</span>:
-
-Creating file /Users/rodell/test/docs/source/conf.py.
-Creating file /Users/rodell/test/docs/source/index.rst.
-Creating file /Users/rodell/test/docs/Makefile.
-Creating file /Users/rodell/test/docs/make.bat.
-
-Finished: An initial directory structure has been created.
-
-You should now populate your master file /Users/rodell/test/docs/source/index.rst and create other documentation
-<span class="nb">source</span> files. Use the Makefile to build the docs, like so:
-make builder
-where <span class="s2">&quot;builder&quot;</span> is one of the supported builders, e.g. html, latex or linkcheck.
-</pre></div>
-</div>
-<p>This is what your docs folder will look like if you followed the instruction above.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docs
-├── Makefile
-├── build
-├── make.bat
-└── <span class="nb">source</span>
-    ├── _static
-    ├── _templates
-    ├── conf.py
-    └── index.rst
-</pre></div>
-</div>
-<div class="section" id="sneaky-tricks">
-<h3>Sneaky Tricks<a class="headerlink" href="#sneaky-tricks" title="Permalink to this headline">¶</a></h3>
-<p>Now we will do two sneaky (yet simple) tricks to make your life much easier.</p>
-<p>First, we will add a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file to the docs directory</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>I dont fully understand what this does other than it make things work!</p></li>
-<li><p>If you want to learn what it does go here <a class="reference external" href="https://github.com/vercel/next.js/issues/2029">https://github.com/vercel/next.js/issues/2029</a></p></li>
-</ul>
-</div></blockquote>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch .nojekyll
-</pre></div>
-</div>
-<dl class="simple">
-<dt>Second lets add an index.html file that contian a simple meta tag</dt><dd><ul class="simple">
-<li><p>The meta tage will redirect your to diffenrt index.html in you build folder.</p></li>
-<li><p>Doing this makes life much easier as you can keep everything nice and clean within your soruce folder.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch index.html
-</pre></div>
-</div>
-<p>copy the following meta tag</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;0; url=./build/html/index.html&quot;</span> <span class="p">/&gt;</span>
-</pre></div>
-</div>
-<p>and past into index.html</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi index.html
-</pre></div>
-</div>
-<p>Horray we are making head way!</p>
-<dl class="simple">
-<dt>First, lets update the <cite>conf.py</cite></dt><dd><ul class="simple">
-<li><p>You can leave it as is but I am going to show you my preferred set up.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>We are now set up to build a website. Simply run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
-</pre></div>
-</div>
-<p>And we will have created our first wedpage.</p>
-<p>We will no see a <code class="docutils literal notranslate"><span class="pre">source</span></code> folder and <code class="docutils literal notranslate"><span class="pre">build</span></code> folder</p>
-<p>As the names imply the <cite>source</cite> folder is the source directory that sphinx used to build your website. Sphinx places all built content within the <cite>build</cite> folder.</p>
-<p>You’ll be working in the <cite>source</cite> folder most of the time.
-You will never really need to go into the <cite>build</cite> folder</p>
-</div>
-</div>
-<div class="section" id="github-pages">
-<h2>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="using-markdown-with-sphinx">
-<h2>Using Markdown with Sphinx<a class="headerlink" href="#using-markdown-with-sphinx" title="Permalink to this headline">¶</a></h2>
-<p>You can use Markdown and reStructuredText in the same Sphinx project.
-We support this natively on Read the Docs, and you can do it locally:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install recommonmark
-</pre></div>
-</div>
-<p>Then in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Markdown doesn’t support a lot of the features of Sphinx,
-like inline markup and directives. However, it works for
-basic prose content. reStructuredText is the preferred
-format for technical documentation, please read <a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">this blog post</a>
-for motivation.</p>
-</div>
-</div>
-<div class="section" id="external-resources">
-<h2>External resources<a class="headerlink" href="#external-resources" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
@@ -374,8 +200,10 @@ for motivation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="index.html" class="btn btn-neutral float-left" title="A quick and dirty guide to building documentation using Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Quick start guide to building documentation using Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

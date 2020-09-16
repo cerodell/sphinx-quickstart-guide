@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Installation &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -21,7 +21,6 @@
   
 
   
-    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -37,9 +36,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Repo Setup" href="reposetup.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -85,9 +85,9 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reposetup.html">Repo Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
@@ -139,12 +139,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Installation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -156,23 +158,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
 
-  
-  <div id="search-results">
-  
-  </div>
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Lets install <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Sphinx!</a></p>
+<p>You can install sphinx with either conda or pip.</p>
+<p>If you are using conda (which i recommend) I have added a file called <code class="docutils literal notranslate"><span class="pre">wfrt.yml</span></code>
+You can simply run the following command which will install a conda environment containing all the required packages for this user guide.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The wfrt env is a very stripped down env and I promise it won’t be added clutter to your machine</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f wfrt.yml
+</pre></div>
+</div>
+<p>If you dont want a new conda env</p>
+<p>… code-block:: bash</p>
+<blockquote>
+<div><p>conda install -c conda-forge install sphinx
+conda install -c conda-forge install recommonmark
+conda install -c conda-forge install sphinx-markdown-tables
+conda install -c conda-forge install sphinxcontrib-inlinesyntaxhighlight
+conda install -c conda-forge install nbsphinx</p>
+</div></blockquote>
+<p>Or if you like pip</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx
+pip install recommonmark
+pip install sphinx-markdown-tables
+pip install sphinxcontrib-inlinesyntaxhighlight
+pip install nbsphinx
+</pre></div>
+</div>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reposetup.html" class="btn btn-neutral float-right" title="Repo Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -212,14 +268,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

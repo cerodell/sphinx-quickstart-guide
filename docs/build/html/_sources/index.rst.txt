@@ -1,5 +1,8 @@
-A quick and dirty guide to building documentation using Sphinx
-===================================================================
+Quick start guide to building documentation using Sphinx
+===========================================================
+
+What is Sphinx?
++++++++++++++++++
 
 From the Sphinx homepage...
 
@@ -15,11 +18,21 @@ From the Sphinx homepage...
       * Extensions: automatic testing of code snippets, inclusion of docstrings from Python modules (API docs), and `more <https://www.sphinx-doc.org/en/master/ext/builtins.html#builtin-sphinx-extensions>`_
       * Contributed extensions: more than 50 extensions `contributed by users <https://www.sphinx-doc.org/en/master/develop.html#extensions>`_ in a second repository; most of them installable from PyPI
 
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    quickstart
+   install
+   reposetup
+   website
+   githubpages
+   markdown
+   resources
+   
+   
 
 
 
