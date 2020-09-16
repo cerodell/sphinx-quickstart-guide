@@ -2,6 +2,9 @@
 Repo Setup 
 =============
 
+Make Docs 
+------------
+
 In your porjects repository make a folder called ``docs`` 
 
 .. code-block:: bash 
@@ -28,6 +31,9 @@ We are now going to run ``sphinx-quickstart`` inside the ``docs`` folder.
 .. important::
     Please answer yes to the first question by typing ``y`` than enter. You must say yes to this question for the rest of this quick start guide to function correctly. Answer the remaining questions however you would like. 
 
+
+Run Sphinx 
+------------
 
 Lets run ``sphinx-quickstart`` by:
 

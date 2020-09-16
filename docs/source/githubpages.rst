@@ -40,6 +40,6 @@ We now need to wait a few seconds and refresh our browser.
     :width: 800
     :align: center 
 
-Hopefully, you with see that the website has been published!
+Hopefully, you will see that the website has been published!
 
 Follow the link to see your website :) 
