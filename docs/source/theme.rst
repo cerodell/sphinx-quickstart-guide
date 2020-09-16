@@ -33,8 +33,10 @@ First, we need to install ``sphinx_rtd_theme``
 
 	conda install -c anaconda sphinx_rtd_theme	
 
-	## or 
-	
+or
+
+.. code-block:: bash 
+
     pip install sphinx-rtd-theme
 
 
