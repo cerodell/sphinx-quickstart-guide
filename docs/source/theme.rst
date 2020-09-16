@@ -5,7 +5,7 @@ Sphinx Themes
 Default Theme
 ---------------
 
-the website will look something like this:
+The website will look something like this:
 
 .. figure:: _static/img/git-wfrt.png
     :alt: alternate text
@@ -19,7 +19,7 @@ Kinda boring.....
 Add / Install Theme
 ---------------------
 
-Let spice this up and a theme to your webpage!!
+Let spice this up and a theme to your webpage!
 
 You can check out some of the `Sphinx themes here <https://sphinx-themes.org/>`_
  * There are others as well. 

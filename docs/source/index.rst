@@ -29,6 +29,7 @@ What is Sphinx?
    website
    githubpages
    theme
+   addstuff
    markdown
    resources
    
