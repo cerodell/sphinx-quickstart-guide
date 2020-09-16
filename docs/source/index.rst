@@ -28,6 +28,7 @@ What is Sphinx?
    reposetup
    website
    githubpages
+   theme
    markdown
    resources
    
