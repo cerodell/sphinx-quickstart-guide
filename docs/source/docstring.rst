@@ -2,11 +2,11 @@ Docstrings
 =============
 
 There are several different docstring formats which one can use in order to enable Sphinx's ``autodoc`` 
-extension to automatically generate documentation. For this tutorial we will use the ``Sphinx`` format, 
-since, as the name suggests, it is the standard format used with Sphinx. Other formats include
+extension to automatically generate documentation. For this tutorial we will use the 
+`NumPy <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy>`_, format.
+Other formats include
 `Google <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_) and
-`NumPy <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy>`_,
-but they require the use of Sphinx's ``napoleon`` extension, which is beyond the scope of this tutorial.
+`Sphinx <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_,
 
 NumPy Docstrings example for a function
 --------------------------------------------
