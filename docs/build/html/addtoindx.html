@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using Markdown with Sphinx &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Index / Toctree &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usefull resources" href="resources.html" />
-    <link rel="prev" title="Using autodocs" href="api.html" /> 
+    <link rel="next" title="Using autodocs" href="api.html" />
+    <link rel="prev" title="Docstrings" href="docstring.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,9 +94,12 @@
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html#conf">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="addtoindx.html">Index / Toctree</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Index / Toctree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-to-toctree">Add to toctree</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">Using autodocs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Markdown with Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
 
@@ -144,13 +147,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Using Markdown with Sphinx</li>
+      <li>Index / Toctree</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/markdown.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/addtoindx.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -187,24 +190,63 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="using-markdown-with-sphinx">
-<h1>Using Markdown with Sphinx<a class="headerlink" href="#using-markdown-with-sphinx" title="Permalink to this headline">¶</a></h1>
-<p>You can use Markdown and reStructuredText in the same Sphinx project.
-We support this natively on Read the Docs, and you can do it locally:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install recommonmark
+<div class="section" id="index-toctree">
+<h1>Index / Toctree<a class="headerlink" href="#index-toctree" title="Permalink to this headline">¶</a></h1>
+<p>Now understanding the different ways to document python code lets bring some into our documentation webpage.</p>
+<p>To do this we needed first need understand <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and <code class="docutils literal notranslate"><span class="pre">toctree</span></code></p>
+<p>Here is our current <code class="docutils literal notranslate"><span class="pre">index.rst</span></code></p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. WFRT-DEMO documentation master file, created by</span>
+sphinx-quickstart on Wed Sep 16 13:47:52 2020.
+You can adapt this file completely to your liking, but it should at least
+contain the root <span class="nv">`toctree`</span> directive.
+
+<span class="gh">Welcome to WFRT-DEMO&#39;s documentation!</span>
+<span class="gh">=====================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="nc">:maxdepth:</span> 2
+<span class="nc">:caption:</span> Contents:
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
 </pre></div>
 </div>
-<p>Then in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
+<p>Ok, cool now how do we add to this? Let’s find out!</p>
+<div class="section" id="add-to-toctree">
+<h2>Add to toctree<a class="headerlink" href="#add-to-toctree" title="Permalink to this headline">¶</a></h2>
+<p>Lets make a new <code class="docutils literal notranslate"><span class="pre">rst</span></code> file called <code class="docutils literal notranslate"><span class="pre">api.rst</span></code> within our <code class="docutils literal notranslate"><span class="pre">soure/</span></code> folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch api.rst
 </pre></div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Markdown doesn’t support a lot of the features of Sphinx,
-like inline markup and directives. However, it works for
-basic prose content. reStructuredText is the preferred
-format for technical documentation, please read <a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">this blog post</a>
-for motivation.</p>
+<p>Lets leave <code class="docutils literal notranslate"><span class="pre">api.rst</span></code> blank for now and place it within the toctree</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. WFRT-DEMO documentation master file, created by</span>
+sphinx-quickstart on Wed Sep 16 13:47:52 2020.
+You can adapt this file completely to your liking, but it should at least
+contain the root <span class="nv">`toctree`</span> directive.
+
+<span class="gh">Welcome to WFRT-DEMO&#39;s documentation!</span>
+<span class="gh">=====================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="nc">:maxdepth:</span> 2
+<span class="nc">:caption:</span> Contents:
+
+api
+
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</div>
+<p>We will now add some code to our webpage!</p>
 </div>
 </div>
 
@@ -216,10 +258,10 @@ for motivation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="resources.html" class="btn btn-neutral float-right" title="Usefull resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api.html" class="btn btn-neutral float-right" title="Using autodocs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="api.html" class="btn btn-neutral float-left" title="Using autodocs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="docstring.html" class="btn btn-neutral float-left" title="Docstrings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

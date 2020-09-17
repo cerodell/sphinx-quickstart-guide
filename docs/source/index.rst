@@ -30,6 +30,7 @@ What is Sphinx?
    githubpages
    theme
    docstring
+   addtoindx
    api
    markdown
    resources

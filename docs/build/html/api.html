@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using the Autodoc &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Using autodocs &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using Markdown with Sphinx" href="markdown.html" />
-    <link rel="prev" title="Docstrings" href="docstring.html" /> 
+    <link rel="prev" title="Index / Toctree" href="addtoindx.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,7 +94,8 @@
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html#conf">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the Autodoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addtoindx.html">Index / Toctree</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using autodocs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
@@ -143,7 +144,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Using the Autodoc</li>
+      <li>Using autodocs</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,8 +187,8 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="using-the-autodoc">
-<h1>Using the Autodoc<a class="headerlink" href="#using-the-autodoc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-autodocs">
+<h1>Using autodocs<a class="headerlink" href="#using-autodocs" title="Permalink to this headline">¶</a></h1>
 <p>For this case, we are going to use <code class="docutils literal notranslate"><span class="pre">automodule</span></code> from <code class="docutils literal notranslate"><span class="pre">autodocs</span></code></p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">wfrt-demo</span></code> repo there is a <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> file that is well documented using the NumPy docstring formate</p>
 <p>Here is what that script looks like</p>
@@ -298,9 +299,23 @@
     <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>We are now going to</p>
-<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autodoc</span><span class="p">::</span> utils.foo
+<p>To document this script, all we need to do is going our <code class="docutils literal notranslate"><span class="pre">api.rst</span></code> file and add the following</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="gh">API</span>
+<span class="gh">=====</span>
+
+<span class="p">..</span> <span class="ow">autodoc</span><span class="p">::</span> utils.foo
     <span class="nc">:members:</span>
+</pre></div>
+</div>
+<p>Lets rebuild our webiste</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make clean
+make html
+</pre></div>
+</div>
+<p>And this new work to <a class="reference external" href="github.com">GitHub</a> and see documented code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s2">&quot;added api to docs&quot;</span>
+git push
 </pre></div>
 </div>
 </div>
@@ -316,7 +331,7 @@
         <a href="markdown.html" class="btn btn-neutral float-right" title="Using Markdown with Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="docstring.html" class="btn btn-neutral float-left" title="Docstrings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="addtoindx.html" class="btn btn-neutral float-left" title="Index / Toctree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

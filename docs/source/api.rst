@@ -1,5 +1,5 @@
-Using the Autodoc
-======================
+Using autodocs
+================
 
 For this case, we are going to use ``automodule`` from ``autodocs``
 
@@ -121,11 +121,28 @@ Here is what that script looks like
 
 
 
-We are now going to 
+To document this script, all we need to do is going our ``api.rst`` file and add the following 
 
 .. code-block:: RST
+
+    API
+    =====
 
     .. autodoc:: utils.foo
         :members:
 
 
+Lets rebuild our webiste 
+
+.. code-block:: bash 
+
+    make clean
+    make html
+
+And this new work to `GitHub <github.com>`_ and see documented code.
+
+.. code-block:: bash 
+
+    git add .
+    git commit -m "added api to docs"
+    git push
