@@ -128,7 +128,7 @@ To document this script, all we need to do is go into our ``api.rst`` file and a
     API
     =====
 
-    .. autodoc:: utils.foo
+    .. automodule:: utils.foo
         :members:
 
 
