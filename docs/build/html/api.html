@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Using the Autodoc &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -92,8 +92,9 @@
 <li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme.html#conf">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the Autodoc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
@@ -142,7 +143,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>API</li>
+      <li>Using the Autodoc</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,101 +186,123 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="module-utils.foo">
-<span id="api"></span><h1>API<a class="headerlink" href="#module-utils.foo" title="Permalink to this headline">¶</a></h1>
-<p>Example NumPy style docstrings.</p>
-<p>This module demonstrates documentation as specified by the <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy
-Documentation HOWTO</a>. Docstrings may extend over multiple lines. Sections
-are created with a section header followed by an underline of equal length.</p>
-<p class="rubric">Example</p>
-<p>Examples can be given using either the <code class="docutils literal notranslate"><span class="pre">Example</span></code> or <code class="docutils literal notranslate"><span class="pre">Examples</span></code>
-sections. Sections support any reStructuredText formatting, including
-literal blocks:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python example_numpy.py
+<div class="section" id="using-the-autodoc">
+<h1>Using the Autodoc<a class="headerlink" href="#using-the-autodoc" title="Permalink to this headline">¶</a></h1>
+<p>For this case, we are going to use <code class="docutils literal notranslate"><span class="pre">automodule</span></code> from <code class="docutils literal notranslate"><span class="pre">autodocs</span></code></p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">wfrt-demo</span></code> repo there is a <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> file that is well documented using the NumPy docstring formate</p>
+<p>Here is what that script looks like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Example NumPy style docstrings.</span>
+
+<span class="sd">This module demonstrates documentation as specified by the `NumPy</span>
+<span class="sd">Documentation HOWTO`_. Docstrings may extend over multiple lines. Sections</span>
+<span class="sd">are created with a section header followed by an underline of equal length.</span>
+
+<span class="sd">Example</span>
+<span class="sd">-------</span>
+<span class="sd">Examples can be given using either the ``Example`` or ``Examples``</span>
+<span class="sd">sections. Sections support any reStructuredText formatting, including</span>
+<span class="sd">literal blocks::</span>
+
+<span class="sd">    $ python example_numpy.py</span>
+
+<span class="sd">Section breaks are created with two blank lines. Section breaks are also</span>
+<span class="sd">implicitly created anytime a new section starts. Section bodies *may* be</span>
+<span class="sd">indented:</span>
+
+<span class="sd">Notes</span>
+<span class="sd">-----</span>
+<span class="sd">    This is an example of an indented section. It&#39;s like any other section,</span>
+<span class="sd">    but the body is indented to help it stand out from surrounding text.</span>
+
+<span class="sd">If a section is indented, then a section break is created by</span>
+<span class="sd">resuming unindented text.</span>
+
+<span class="sd">Attributes</span>
+<span class="sd">----------</span>
+<span class="sd">module_level_variable1 : int</span>
+<span class="sd">    Module level variables may be documented in either the ``Attributes``</span>
+<span class="sd">    section of the module docstring, or in an inline docstring immediately</span>
+<span class="sd">    following the variable.</span>
+
+<span class="sd">    Either form is acceptable, but the two should not be mixed. Choose</span>
+<span class="sd">    one convention to document module level variables and be consistent</span>
+<span class="sd">    with it.</span>
+
+<span class="sd">.. _NumPy Documentation HOWTO:</span>
+<span class="sd">https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">module_level_function</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is an example of a module level function.</span>
+
+<span class="sd">    Function parameters should be documented in the ``Parameters`` section.</span>
+<span class="sd">    The name of each parameter is required. The type and description of each</span>
+<span class="sd">    parameter is optional, but should be included if not obvious.</span>
+
+<span class="sd">    If \*args or \*\*kwargs are accepted,</span>
+<span class="sd">    they should be listed as ``*args`` and ``**kwargs``.</span>
+
+<span class="sd">    The format for a parameter is::</span>
+
+<span class="sd">        name : type</span>
+<span class="sd">            description</span>
+
+<span class="sd">            The description may span multiple lines. Following lines</span>
+<span class="sd">            should be indented to match the first line of the description.</span>
+<span class="sd">            The &quot;: type&quot; is optional.</span>
+
+<span class="sd">            Multiple paragraphs are supported in parameter</span>
+<span class="sd">            descriptions.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    param1 : int</span>
+<span class="sd">        The first parameter.</span>
+<span class="sd">    param2 : :obj:`str`, optional</span>
+<span class="sd">        The second parameter.</span>
+<span class="sd">    *args</span>
+<span class="sd">        Variable length argument list.</span>
+<span class="sd">    **kwargs</span>
+<span class="sd">        Arbitrary keyword arguments.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        True if successful, False otherwise.</span>
+
+<span class="sd">        The return type is not optional. The ``Returns`` section may span</span>
+<span class="sd">        multiple lines and paragraphs. Following lines should be indented to</span>
+<span class="sd">        match the first line of the description.</span>
+
+<span class="sd">        The ``Returns`` section supports any reStructuredText formatting,</span>
+<span class="sd">        including literal blocks::</span>
+
+<span class="sd">            {</span>
+<span class="sd">                &#39;param1&#39;: param1,</span>
+<span class="sd">                &#39;param2&#39;: param2</span>
+<span class="sd">            }</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    AttributeError</span>
+<span class="sd">        The ``Raises`` section is a list of all exceptions</span>
+<span class="sd">        that are relevant to the interface.</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If `param2` is equal to `param1`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">param1</span> <span class="o">==</span> <span class="n">param2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;param1 may not be equal to param2&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Section breaks are created with two blank lines. Section breaks are also
-implicitly created anytime a new section starts. Section bodies <em>may</em> be
-indented:</p>
-<p class="rubric">Notes</p>
-<p>This is an example of an indented section. It’s like any other section,
-but the body is indented to help it stand out from surrounding text.</p>
-<p>If a section is indented, then a section break is created by
-resuming unindented text.</p>
-<dl class="py attribute">
-<dt id="utils.foo.module_level_variable1">
-<code class="sig-prename descclassname">utils.foo.</code><code class="sig-name descname">module_level_variable1</code><a class="headerlink" href="#utils.foo.module_level_variable1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Module level variables may be documented in either the <code class="docutils literal notranslate"><span class="pre">Attributes</span></code>
-section of the module docstring, or in an inline docstring immediately
-following the variable.</p>
-<p>Either form is acceptable, but the two should not be mixed. Choose
-one convention to document module level variables and be consistent
-with it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="utils.foo.module_level_function">
-<code class="sig-prename descclassname">utils.foo.</code><code class="sig-name descname">module_level_function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param1</span></em>, <em class="sig-param"><span class="n">param2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.foo.module_level_function" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is an example of a module level function.</p>
-<p>Function parameters should be documented in the <code class="docutils literal notranslate"><span class="pre">Parameters</span></code> section.
-The name of each parameter is required. The type and description of each
-parameter is optional, but should be included if not obvious.</p>
-<p>If *args or **kwargs are accepted,
-they should be listed as <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</p>
-<p>The format for a parameter is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="p">:</span> <span class="nb">type</span>
-    <span class="n">description</span>
-
-    <span class="n">The</span> <span class="n">description</span> <span class="n">may</span> <span class="n">span</span> <span class="n">multiple</span> <span class="n">lines</span><span class="o">.</span> <span class="n">Following</span> <span class="n">lines</span>
-    <span class="n">should</span> <span class="n">be</span> <span class="n">indented</span> <span class="n">to</span> <span class="n">match</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="n">the</span> <span class="n">description</span><span class="o">.</span>
-    <span class="n">The</span> <span class="s2">&quot;: type&quot;</span> <span class="ow">is</span> <span class="n">optional</span><span class="o">.</span>
-
-    <span class="n">Multiple</span> <span class="n">paragraphs</span> <span class="n">are</span> <span class="n">supported</span> <span class="ow">in</span> <span class="n">parameter</span>
-    <span class="n">descriptions</span><span class="o">.</span>
+<p>We are now going to</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autodoc</span><span class="p">::</span> utils.foo
+    <span class="nc">:members:</span>
 </pre></div>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>param1</strong> (<em>int</em>) – The first parameter.</p></li>
-<li><p><strong>param2</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The second parameter.</p></li>
-<li><p><strong>*args</strong> – Variable length argument list.</p></li>
-<li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p>True if successful, False otherwise.</p>
-<p>The return type is not optional. The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section may span
-multiple lines and paragraphs. Following lines should be indented to
-match the first line of the description.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section supports any reStructuredText formatting,
-including literal blocks:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s1">&#39;param1&#39;</span><span class="p">:</span> <span class="n">param1</span><span class="p">,</span>
-    <span class="s1">&#39;param2&#39;</span><span class="p">:</span> <span class="n">param2</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>bool</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>AttributeError</strong> – The <code class="docutils literal notranslate"><span class="pre">Raises</span></code> section is a list of all exceptions
-    that are relevant to the interface.</p></li>
-<li><p><strong>ValueError</strong> – If <cite>param2</cite> is equal to <cite>param1</cite>.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 </div>
 
 

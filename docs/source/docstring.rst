@@ -8,10 +8,8 @@ since, as the name suggests, it is the standard format used with Sphinx. Other f
 `NumPy <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy>`_,
 but they require the use of Sphinx's ``napoleon`` extension, which is beyond the scope of this tutorial.
 
-NumPy docstring function example
-----------------------------------
-
-In general, a typical ``Sphinx`` docstring has the following format:
+NumPy Docstrings example for a function
+--------------------------------------------
 
 .. code-block:: python
 

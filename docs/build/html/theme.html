@@ -94,12 +94,15 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx Themes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#default-theme">Default Theme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#add-install-theme">Add / Install Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#conf">Conf</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#add-to-conf">Add to Conf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#clean-make-html">Clean / Make HTML</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Using the Autodoc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
@@ -220,29 +223,103 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="add-to-conf">
-<h2>Add to Conf<a class="headerlink" href="#add-to-conf" title="Permalink to this headline">¶</a></h2>
-<p>With the theme installed we need to add the extension to our <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file in the <code class="docutils literal notranslate"><span class="pre">source/</span></code> folder</p>
-<p>Open <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>…</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> source/
-vi conf.py
+</div>
+<div class="section" id="conf">
+<h1>Conf<a class="headerlink" href="#conf" title="Permalink to this headline">¶</a></h1>
+<p>Now let’s dive into the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file and our theme and some other usefull extentions</p>
+<p>Here is what your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file looks like currently</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># list see the documentation:</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+
+<span class="c1"># -- Path setup --------------------------------------------------------------</span>
+
+<span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c1">#</span>
+<span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;WFRT-DEMO&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Chris&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Chris&#39;</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">]</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;alabaster&#39;</span>
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>…and add the following</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import sphinx_rtd_theme
+<div class="section" id="add-to-conf">
+<h2>Add to Conf<a class="headerlink" href="#add-to-conf" title="Permalink to this headline">¶</a></h2>
+<p>Now open the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file in the <code class="docutils literal notranslate"><span class="pre">source/</span></code> folder ad add the following from General configuration down.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
 
-<span class="nv">extensions</span> <span class="o">=</span> <span class="o">[</span>
-    ...
-    <span class="s2">&quot;sphinx_rtd_theme&quot;</span>,
-<span class="o">]</span>
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="nv">extensions</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span>, <span class="s1">&#39;sphinx.ext.coverage&#39;</span>, <span class="s1">&#39;sphinx.ext.autosectionlabel&#39;</span>, <span class="se">\</span>
+    <span class="s1">&#39;sphinx.ext.napoleon&#39;</span>, <span class="s1">&#39;sphinx_automodapi.automodapi&#39;</span>, <span class="s1">&#39;recommonmark&#39;</span>, <span class="se">\</span>
+        <span class="s1">&#39;sphinx_markdown_tables&#39;</span>, <span class="s1">&#39;sphinxcontrib.inlinesyntaxhighlight&#39;</span>, <span class="se">\</span>
+            <span class="s1">&#39;nbsphinx&#39;</span>, <span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="o">]</span>
 
-<span class="nv">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
+<span class="c1"># use language set by highlight directive if no language is set by role</span>
+<span class="nv">inline_highlight_respect_highlight</span> <span class="o">=</span> False
+
+<span class="c1"># use language set by highlight directive if no role is set</span>
+<span class="nv">inline_highlight_literals</span> <span class="o">=</span> False
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="nv">templates_path</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;_templates&#39;</span><span class="o">]</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="nv">exclude_patterns</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;_build&#39;</span>, <span class="s1">&#39;Thumbs.db&#39;</span>, <span class="s1">&#39;.DS_Store&#39;</span><span class="o">]</span>
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="nv">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1"># # Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># # relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># # so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="nv">html_static_path</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;_static&#39;</span><span class="o">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="clean-make-html">
 <h2>Clean / Make HTML<a class="headerlink" href="#clean-make-html" title="Permalink to this headline">¶</a></h2>
-<p>Now, let’s remake our website with the new theme by first cleaning than remaking our build folder.</p>
+<p>Now, let’s remake our website with the new theme and added extentions by first cleaning than remaking our build folder.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to be in the docs folder when running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> or <code class="docutils literal notranslate"><span class="pre">clean</span> <span class="pre">html</span></code></p>
