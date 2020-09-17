@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Add to our website &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Docstrings &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Using Markdown with Sphinx" href="markdown.html" />
+    <link rel="next" title="API" href="api.html" />
     <link rel="prev" title="Sphinx Themes" href="theme.html" /> 
 </head>
 
@@ -92,7 +92,11 @@
 <li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Add to our website</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docstrings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#numpy-docstring-function-example">NumPy docstring function example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Using Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
 </ul>
@@ -141,13 +145,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Add to our website</li>
+      <li>Docstrings</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/addstuff.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/docstring.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,8 +188,43 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="add-to-our-website">
-<h1>Add to our website<a class="headerlink" href="#add-to-our-website" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="docstrings">
+<h1>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h1>
+<p>There are several different docstring formats which one can use in order to enable Sphinx’s <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>
+extension to automatically generate documentation. For this tutorial we will use the <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> format,
+since, as the name suggests, it is the standard format used with Sphinx. Other formats include
+<a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Google</a>) and
+<a class="reference external" href="http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy">NumPy</a>,
+but they require the use of Sphinx’s <code class="docutils literal notranslate"><span class="pre">napoleon</span></code> extension, which is beyond the scope of this tutorial.</p>
+<div class="section" id="numpy-docstring-function-example">
+<h2>NumPy docstring function example<a class="headerlink" href="#numpy-docstring-function-example" title="Permalink to this headline">¶</a></h2>
+<p>In general, a typical <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> docstring has the following format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_with_types_in_docstring</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Example function with types documented in the docstring.</span>
+
+<span class="sd">    `PEP 484`_ type annotations are supported. If attribute, parameter, and</span>
+<span class="sd">    return types are annotated according to `PEP 484`_, they do not need to be</span>
+<span class="sd">    included in the docstring:</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    param1 : int</span>
+<span class="sd">        The first parameter.</span>
+<span class="sd">    param2 : str</span>
+<span class="sd">        The second parameter.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        True if successful, False otherwise.</span>
+
+<span class="sd">    .. _PEP 484:</span>
+<span class="sd">        https://www.python.org/dev/peps/pep-0484/</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -196,7 +235,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="markdown.html" class="btn btn-neutral float-right" title="Using Markdown with Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="theme.html" class="btn btn-neutral float-left" title="Sphinx Themes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

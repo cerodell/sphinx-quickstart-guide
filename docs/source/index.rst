@@ -29,7 +29,8 @@ What is Sphinx?
    website
    githubpages
    theme
-   addstuff
+   docstring
+   api
    markdown
    resources
    
