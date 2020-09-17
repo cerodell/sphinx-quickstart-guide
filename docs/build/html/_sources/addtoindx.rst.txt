@@ -19,8 +19,8 @@ Here is our current ``index.rst``
     =====================================
 
     .. toctree::
-    :maxdepth: 2
-    :caption: Contents:
+       :maxdepth: 2
+       :caption: Contents:
 
 
 
@@ -57,10 +57,10 @@ Lets leave ``api.rst`` blank for now and place it within the toctree
     =====================================
 
     .. toctree::
-    :maxdepth: 2
-    :caption: Contents:
+       :maxdepth: 2
+       :caption: Contents:
 
-    api
+       api
    
 
     Indices and tables

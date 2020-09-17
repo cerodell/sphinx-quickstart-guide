@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GitHub Pages &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>WFRT Demo &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sphinx Themes" href="theme.html" />
-    <link rel="prev" title="Build a Website" href="website.html" /> 
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,17 +87,18 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">WFRT Demo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WFRT Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#clone-repository">Clone repository</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssh">ssh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#https">https</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reposetup.html">Repo Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="website.html">Build a Website</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">GitHub Pages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#source">Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#folder">Folder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#save">Save</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="githubpages.html">GitHub Pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html">Sphinx Themes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theme.html#conf">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
@@ -151,13 +152,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>GitHub Pages</li>
+      <li>WFRT Demo</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/githubpages.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/demo.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,42 +195,24 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="github-pages">
-<h1>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h1>
-<p>On your <a class="reference external" href="https://github.com/">GitHub</a> account. Go to the project repository where you have added the docs folder.</p>
-<div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<p>Click Settings</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/git-settings.png"><img alt="alternate text" src="_images/git-settings.png" style="width: 800px;" /></a>
+<div class="section" id="wfrt-demo">
+<h1>WFRT Demo<a class="headerlink" href="#wfrt-demo" title="Permalink to this headline">¶</a></h1>
+<p>Howdy! Please start by cloning the wrft-demo repository from my git hub account.</p>
+<p>I hope everyone has an <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">ssh key</a> setup with <a class="reference external" href="https://github.com/">GitHub</a> if not I hope you know your GitHub password and like typing it!</p>
+<div class="section" id="clone-repository">
+<h2>Clone repository<a class="headerlink" href="#clone-repository" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ssh">
+<h3>ssh<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git@github.com:cerodell/wfrt-demo.git
+</pre></div>
 </div>
 </div>
-<div class="section" id="source">
-<h2>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
-<p>Scroll down to GitHub Page and under source change <code class="docutils literal notranslate"><span class="pre">None</span></code> to <code class="docutils literal notranslate"><span class="pre">master</span></code> …</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/git-branch.jpg"><img alt="alternate text" src="_images/git-branch.jpg" style="width: 800px;" /></a>
+<div class="section" id="https">
+<h3>https<a class="headerlink" href="#https" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://github.com/cerodell/wfrt-demo.git
+</pre></div>
 </div>
 </div>
-<div class="section" id="folder">
-<h2>Folder<a class="headerlink" href="#folder" title="Permalink to this headline">¶</a></h2>
-<p>…and   change <code class="docutils literal notranslate"><span class="pre">root/</span></code> folder to <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/git-root.jpg"><img alt="alternate text" src="_images/git-root.jpg" style="width: 800px;" /></a>
-</div>
-</div>
-<div class="section" id="save">
-<h2>Save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
-<p>Click Save</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/git-folder.jpg"><img alt="alternate text" src="_images/git-folder.jpg" style="width: 800px;" /></a>
-</div>
-<p>We now need to wait a few seconds and refresh our browser.</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/git-saved.jpg"><img alt="alternate text" src="_images/git-saved.jpg" style="width: 800px;" /></a>
-</div>
-<p>Hopefully, you will see that the website has been published!</p>
-<p>Follow the link to see your website :)</p>
 </div>
 </div>
 
@@ -241,10 +224,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="theme.html" class="btn btn-neutral float-right" title="Sphinx Themes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="website.html" class="btn btn-neutral float-left" title="Build a Website" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

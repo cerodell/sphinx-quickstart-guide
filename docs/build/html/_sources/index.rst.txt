@@ -17,6 +17,7 @@ What is Sphinx?
       * Extensions: automatic testing of code snippets, inclusion of docstrings from Python modules (API docs), and `more <https://www.sphinx-doc.org/en/master/ext/builtins.html#builtin-sphinx-extensions>`_
       * Contributed extensions: more than 50 extensions `contributed by users <https://www.sphinx-doc.org/en/master/develop.html#extensions>`_ in a second repository; most of them installable from PyPI
 
+conda env export > wfrt.yml
 
 
 .. toctree::
@@ -24,6 +25,7 @@ What is Sphinx?
    :caption: Contents:
 
    quickstart
+   demo
    install
    reposetup
    website

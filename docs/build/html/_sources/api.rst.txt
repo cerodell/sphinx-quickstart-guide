@@ -121,7 +121,7 @@ Here is what that script looks like
 
 
 
-To document this script, all we need to do is going our ``api.rst`` file and add the following 
+To document this script, all we need to do is go into our ``api.rst`` file and add the following 
 
 .. code-block:: RST
 

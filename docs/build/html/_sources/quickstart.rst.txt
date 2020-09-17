@@ -8,6 +8,8 @@ A quick start guide showing:
 #.  :ref:`How to build a website. <Build a Website>`
 #.  :ref:`How to connect docs to GitHub Pages. <Github Pages>`
 #.  :ref:`How to add a theme to Sphinx. <Sphinx Themes>`
+#.  :ref:`How to use docstring in Sphinx. <Docstrings>`
+#.  :ref:`How to use autodocs <Using autodocs>`
 #.  :ref:`How to use Markdown with Sphinx. <Using Markdown with Sphinx>`
 
 
