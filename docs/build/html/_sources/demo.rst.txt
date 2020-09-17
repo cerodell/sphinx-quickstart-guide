@@ -14,11 +14,11 @@ ssh
 
 .. code-block:: bash
 
-    git@github.com:cerodell/wfrt-demo.git
+    git clone git@github.com:cerodell/wfrt-demo.git
 
 https
 ++++++++
 
 .. code-block:: bash
 
-    https://github.com/cerodell/wfrt-demo.git
+    git clone https://github.com/cerodell/wfrt-demo.git
