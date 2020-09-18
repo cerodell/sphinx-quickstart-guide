@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Governing Equations" href="mymarkdown.html" />
+    <link rel="next" title="h1 Heading 8-)" href="mymarkdown.html" />
     <link rel="prev" title="Using autodocs" href="api.html" /> 
 </head>
 
@@ -103,7 +103,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#add-a-markdown-page-to-toctree">Add a Markdown page to toctree</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mymarkdown.html">Governing Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mymarkdown.html">h1 Heading 8-)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Math Equations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Useful resources</a></li>
 </ul>
 
@@ -220,25 +221,164 @@ for motivation.</p>
 </pre></div>
 </div>
 <p>Open <code class="docutils literal notranslate"><span class="pre">mymarkdown.md</span></code> and add a header and some other conectent</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Governing Equations
+<p>This code came from &lt;<a class="reference external" href="https://markdown-it.github.io/">https://markdown-it.github.io/</a>&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
-The governing equations from Thomas Warner&#39;s book: Numerical Weather and Climate Prediction
+## Horizontal Rules
 
-$$ \frac{\partial u}{\partial t}=-u \frac{\partial u}{\partial x}-v \frac{\partial u}{\partial y}-w \frac{\partial u}{\partial z}+\frac{u v \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial x}-2 \Omega(w \cos \phi-v \sin \phi)+F r_{x} $$ (2.1)
+___
 
-$$ \frac{\partial v}{\partial t}=-u \frac{\partial v}{\partial x}-v \frac{\partial v}{\partial y}-w \frac{\partial v}{\partial z}-\frac{u^{2} \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial y}-2 \Omega u \sin \phi+F r_{y} $$ (2.2)
+---
 
-$$ \frac{\partial w}{\partial t}=-u \frac{\partial w}{\partial x}-v \frac{\partial w}{\partial y}-w \frac{\partial w}{\partial z}-\frac{u^{2}+v^{2}}{a}-\frac{1}{\rho} \frac{\partial p}{\partial z}+2 \Omega u \cos \phi-g+F r_{z} $$ (2.3)
+***
 
-$$ \frac{\partial T}{\partial t}=-u \frac{\partial T}{\partial x}-v \frac{\partial T}{\partial y}+\left(\gamma-\gamma_{d}\right) w+\frac{1}{c_{p}} \frac{d H}{d t} $$ (2.4)
+## Typographic replacements
 
-$$ \frac{\partial \rho}{\partial t}=-u \frac{\partial \rho}{\partial x}-v \frac{\partial \rho}{\partial y}-w \frac{\partial \rho}{\partial z}-\rho\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right) $$ (2.5)
+Enable typographer option to see result.
 
-$$ \frac{\partial q_{v}}{\partial t}=-u \frac{\partial q_{v}}{\partial x}-v \frac{\partial q_{v}}{\partial y}-w \frac{\partial q_{v}}{\partial z}+Q_{v} $$ (2.6)
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
-$$ P=\rho R T $$ (2.7)
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+&quot;Smartypants, double quotes&quot; and &#39;single quotes&#39;
+
+## Emphasis
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+
+## Blockquotes
+
+&gt; Blockquotes can also be nested...
+&gt;&gt; ...by using additional greater-than signs right next to each other...
+&gt; &gt; &gt; ...or with spaces between arrows.
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+- Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+## Code
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+Block code &quot;fences&quot;
+
+```
+Sample text here...
+```
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+return bar++;
+};
+
+console.log(foo(5));
+```
+
+## Tables
 </pre></div>
 </div>
+<p>&lt;pre&gt;&lt;code&gt;| Option | Description |
+| —— | ———– |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+&lt;/code&gt;&lt;/pre&gt;</p>
+<blockquote>
+<div><p>Right aligned columns</p>
+</div></blockquote>
+<p>&lt;pre&gt;&lt;code&gt;| Option | Description |
+| ——:| ———–:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+&lt;/code&gt;&lt;/pre&gt;</p>
+<blockquote>
+<div><p>## Links</p>
+<p>[link text](<a class="reference external" href="http://dev.nodeca.com">http://dev.nodeca.com</a>)</p>
+<p>[link with title](<a class="reference external" href="http://nodeca.github.io/pica/demo/">http://nodeca.github.io/pica/demo/</a> “title text!”)</p>
+<p>Autoconverted link <a class="reference external" href="https://github.com/nodeca/pica">https://github.com/nodeca/pica</a> (enable linkify to see)</p>
+<p>## Images</p>
+<p>![Minion](<a class="reference external" href="https://octodex.github.com/images/minion.png">https://octodex.github.com/images/minion.png</a>)
+![Stormtroopocat](<a class="reference external" href="https://octodex.github.com/images/stormtroopocat.jpg">https://octodex.github.com/images/stormtroopocat.jpg</a> “The Stormtroopocat”)</p>
+<p>Like links, Images also have a footnote style syntax</p>
+<p>![Alt text][id]</p>
+<p>With a reference later in the document defining the URL location:</p>
+<p>[id]: <a class="reference external" href="https://octodex.github.com/images/dojocat.jpg">https://octodex.github.com/images/dojocat.jpg</a>  “The Dojocat”</p>
+<p>## Plugins</p>
+<p>The killer feature of <cite>markdown-it</cite> is very effective support of
+[syntax plugins](<a class="reference external" href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">https://www.npmjs.org/browse/keyword/markdown-it-plugin</a>).</p>
+<p>### [Emojies](<a class="reference external" href="https://github.com/markdown-it/markdown-it-emoji">https://github.com/markdown-it/markdown-it-emoji</a>)</p>
+<p>&gt; Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+&gt;
+&gt; Shortcuts (emoticons): :-) :-( 8-) ;)</p>
+<p>see [how to change output](<a class="reference external" href="https://github.com/markdown-it/markdown-it-emoji#change-output">https://github.com/markdown-it/markdown-it-emoji#change-output</a>) with twemoji.</p>
+<p>### [Subscript](<a class="reference external" href="https://github.com/markdown-it/markdown-it-sub">https://github.com/markdown-it/markdown-it-sub</a>) / [Superscript](<a class="reference external" href="https://github.com/markdown-it/markdown-it-sup">https://github.com/markdown-it/markdown-it-sup</a>)</p>
+<ul class="simple">
+<li><p>19^th^</p></li>
+<li><p>H~2~O</p></li>
+</ul>
+<p>### [&lt;ins&gt;](<a class="reference external" href="https://github.com/markdown-it/markdown-it-ins">https://github.com/markdown-it/markdown-it-ins</a>)</p>
+<p>++Inserted text++</p>
+<p>### [&lt;mark&gt;](<a class="reference external" href="https://github.com/markdown-it/markdown-it-mark">https://github.com/markdown-it/markdown-it-mark</a>)</p>
+<p>==Marked text==</p>
+<p>### [Footnotes](<a class="reference external" href="https://github.com/markdown-it/markdown-it-footnote">https://github.com/markdown-it/markdown-it-footnote</a>)</p>
+<p>Footnote 1 link[^first].</p>
+<p>Footnote 2 link[^second].</p>
+<p>Inline footnote^[Text of inline footnote] definition.</p>
+<p>Duplicated footnote reference[^second].</p>
+<p>[^first]: Footnote <strong>can have markup</strong></p>
+<blockquote>
+<div><p>and multiple paragraphs.</p>
+</div></blockquote>
+<p>[^second]: Footnote text.</p>
+<p>### [Definition lists](<a class="reference external" href="https://github.com/markdown-it/markdown-it-deflist">https://github.com/markdown-it/markdown-it-deflist</a>)</p>
+</div></blockquote>
 <p>Head over to your <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and add <code class="docutils literal notranslate"><span class="pre">mymarkdown</span></code> to the toctree.</p>
 <div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. WFRT-DEMO documentation master file, created by</span>
 sphinx-quickstart on Wed Sep 16 13:47:52 2020.
@@ -280,7 +420,7 @@ git push
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mymarkdown.html" class="btn btn-neutral float-right" title="Governing Equations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mymarkdown.html" class="btn btn-neutral float-right" title="h1 Heading 8-)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="api.html" class="btn btn-neutral float-left" title="Using autodocs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -35,6 +35,7 @@ What is Sphinx?
    api
    markdown
    mymarkdown
+   math
    resources
    
    

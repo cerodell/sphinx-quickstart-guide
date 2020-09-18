@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Quick Start &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Math Equations &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="WFRT Demo" href="demo.html" />
-    <link rel="prev" title="How to build documentation with Sphinx" href="index.html" /> 
+    <link rel="next" title="Useful resources" href="resources.html" />
+    <link rel="prev" title="h1 Heading 8-)" href="mymarkdown.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,7 +88,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">WFRT Demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reposetup.html">Repo Setup</a></li>
@@ -101,7 +101,10 @@
 <li class="toctree-l1"><a class="reference internal" href="api.html">Using autodocs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown with Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mymarkdown.html">h1 Heading 8-)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math.html">Math Equations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Math Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-equations">Example Equations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Useful resources</a></li>
 </ul>
 
@@ -149,13 +152,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Quick Start</li>
+      <li>Math Equations</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/math.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,19 +195,21 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="quick-start">
-<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
-<p>A quick start guide showing:</p>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="install.html#installation"><span class="std std-ref">How to Install Sphinx.</span></a></p></li>
-<li><p><a class="reference internal" href="reposetup.html#repo-setup"><span class="std std-ref">How to set up your Repository.</span></a></p></li>
-<li><p><a class="reference internal" href="website.html#build-a-website"><span class="std std-ref">How to build a website.</span></a></p></li>
-<li><p><a class="reference internal" href="githubpages.html#github-pages"><span class="std std-ref">How to connect docs to GitHub Pages.</span></a></p></li>
-<li><p><a class="reference internal" href="theme.html#sphinx-themes"><span class="std std-ref">How to add a theme to Sphinx.</span></a></p></li>
-<li><p><a class="reference internal" href="docstring.html#docstrings"><span class="std std-ref">How to use docstring in Sphinx.</span></a></p></li>
-<li><p><a class="reference internal" href="api.html#using-autodocs"><span class="std std-ref">How to use autodocs</span></a></p></li>
-<li><p><a class="reference internal" href="markdown.html#markdown-with-sphinx"><span class="std std-ref">How to use Markdown with Sphinx.</span></a></p></li>
-</ol>
+<div class="section" id="math-equations">
+<h1>Math Equations<a class="headerlink" href="#math-equations" title="Permalink to this headline">¶</a></h1>
+<p>Adding math to your website is very easy in rst. You can use <a class="reference external" href="https://www.latex-project.org/">LateX</a> formate for math equations</p>
+<p>All you need to do is:</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+    f(x)=\int_{0}^{x} f^{\prime}(t) d t
+</pre></div>
+</div>
+<div class="section" id="example-equations">
+<h2>Example Equations<a class="headerlink" href="#example-equations" title="Permalink to this headline">¶</a></h2>
+<p>The governing equations from Thomas Warner’s book: Numerical Weather and Climate Prediction</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\frac{\partial u}{\partial t}=-u \frac{\partial u}{\partial x}-v \frac{\partial u}{\partial y}-w \frac{\partial u}{\partial z}+\frac{u v \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial x}-2 \Omega(w \cos \phi-v \sin \phi)+F r_{x}  (2.1)\\\frac{\partial v}{\partial t}=-u \frac{\partial v}{\partial x}-v \frac{\partial v}{\partial y}-w \frac{\partial v}{\partial z}-\frac{u^{2} \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial y}-2 \Omega u \sin \phi+F r_{y}  (2.2)\\\frac{\partial w}{\partial t}=-u \frac{\partial w}{\partial x}-v \frac{\partial w}{\partial y}-w \frac{\partial w}{\partial z}-\frac{u^{2}+v^{2}}{a}-\frac{1}{\rho} \frac{\partial p}{\partial z}+2 \Omega u \cos \phi-g+F r_{z}  (2.3)\\\frac{\partial T}{\partial t}=-u \frac{\partial T}{\partial x}-v \frac{\partial T}{\partial y}+\left(\gamma-\gamma_{d}\right) w+\frac{1}{c_{p}} \frac{d H}{d t}  (2.4)\\\frac{\partial \rho}{\partial t}=-u \frac{\partial \rho}{\partial x}-v \frac{\partial \rho}{\partial y}-w \frac{\partial \rho}{\partial z}-\rho\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right)  (2.5)\\\frac{\partial q_{v}}{\partial t}=-u \frac{\partial q_{v}}{\partial x}-v \frac{\partial q_{v}}{\partial y}-w \frac{\partial q_{v}}{\partial z}+Q_{v}  (2.6)\\P=\rho R T  (2.7)\end{aligned}\end{align} \]</div>
+</div>
 </div>
 
 
@@ -215,10 +220,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="demo.html" class="btn btn-neutral float-right" title="WFRT Demo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="resources.html" class="btn btn-neutral float-right" title="Useful resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="How to build documentation with Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mymarkdown.html" class="btn btn-neutral float-left" title="h1 Heading 8-)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
