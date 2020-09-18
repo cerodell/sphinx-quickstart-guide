@@ -32,6 +32,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -152,7 +154,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/mymarkdown.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/mymarkdown.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,18 +194,8 @@
 <div class="section" id="governing-equations">
 <h1>Governing Equations<a class="headerlink" href="#governing-equations" title="Permalink to this headline">¶</a></h1>
 <p>The governing equations from Thomas Warner’s book: Numerical Weather and Climate Prediction</p>
-<p>$<code class="docutils literal notranslate"><span class="pre">\frac{\partial</span> <span class="pre">u}{\partial</span> <span class="pre">t}=-u</span> <span class="pre">\frac{\partial</span> <span class="pre">u}{\partial</span> <span class="pre">x}-v</span> <span class="pre">\frac{\partial</span> <span class="pre">u}{\partial</span> <span class="pre">y}-w</span> <span class="pre">\frac{\partial</span> <span class="pre">u}{\partial</span> <span class="pre">z}+\frac{u</span> <span class="pre">v</span> <span class="pre">\tan</span> <span class="pre">\phi}{a}-\frac{u</span> <span class="pre">w}{a}-\frac{1}{\rho}</span> <span class="pre">\frac{\partial</span> <span class="pre">p}{\partial</span> <span class="pre">x}-2</span> <span class="pre">\Omega(w</span> <span class="pre">\cos</span> <span class="pre">\phi-v</span> <span class="pre">\sin</span> <span class="pre">\phi)+F</span> <span class="pre">r_{x}</span></code>$</p>
-<p>$\frac{\partial v}{\partial t}=-u \frac{\partial v}{\partial x}-v \frac{\partial v}{\partial y}-w \frac{\partial v}{\partial z}-\frac{u^{2} \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial y}-2 \Omega u \sin \phi+F r_{y}$</p>
-<p>\frac{\partial w}{\partial t}=-u \frac{\partial w}{\partial x}-v \frac{\partial w}{\partial y}-w \frac{\partial w}{\partial z}-\frac{u^{2}+v^{2}}{a}-\frac{1}{\rho} \frac{\partial p}{\partial z}+2 \Omega u \cos \phi-g+F r_{z}</p>
-<p>$$
-\frac{\partial T}{\partial t}=-u \frac{\partial T}{\partial x}-v \frac{\partial T}{\partial y}+\left(\gamma-\gamma_{d}\right) w+\frac{1}{c_{p}} \frac{d H}{d t}
-$$ (2.4)</p>
-<p>$$
-\frac{\partial \rho}{\partial t}=-u \frac{\partial \rho}{\partial x}-v \frac{\partial \rho}{\partial y}-w \frac{\partial \rho}{\partial z}-\rho\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right)
-$$ (2.5)</p>
-<p>$$\frac{\partial q_{v}}{\partial t}=-u \frac{\partial q_{v}}{\partial x}-v \frac{\partial q_{v}}{\partial y}-w \frac{\partial q_{v}}{\partial z}+Q_{v}$$ (2.6)</p>
-<p>$$P=\rho R T$$</p>
-<p>(2.7)</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=-u \frac{\partial u}{\partial x}-v \frac{\partial u}{\partial y}-w \frac{\partial u}{\partial z}+\frac{u v \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial x}-2 \Omega(w \cos \phi-v \sin \phi)+F r_{x}\]</div>
 </div>
 
 
