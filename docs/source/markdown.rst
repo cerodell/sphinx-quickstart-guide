@@ -41,7 +41,6 @@ This code came from https://markdown-it.github.io/
 
     # Example Markdown
 
-    # h1 Heading 8-)
     ## h2 Heading
     ### h3 Heading
     #### h4 Heading
