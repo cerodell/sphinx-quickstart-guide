@@ -1,2 +1,2 @@
-Usefull resources
+Useful resources
 ===================

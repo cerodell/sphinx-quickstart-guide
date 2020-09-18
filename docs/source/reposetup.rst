@@ -8,7 +8,7 @@ In your porjects repository make a folder called ``docs``
 
 .. code-block:: bash 
 
-    cd /path/to/project
+    cd wfrt-demo/
     mkdir docs
 
 Now head into the ``docs/`` folder

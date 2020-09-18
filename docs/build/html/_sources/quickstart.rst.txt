@@ -10,7 +10,7 @@ A quick start guide showing:
 #.  :ref:`How to add a theme to Sphinx. <Sphinx Themes>`
 #.  :ref:`How to use docstring in Sphinx. <Docstrings>`
 #.  :ref:`How to use autodocs <Using autodocs>`
-#.  :ref:`How to use Markdown with Sphinx. <Using Markdown with Sphinx>`
+#.  :ref:`How to use Markdown with Sphinx. <Markdown with Sphinx>`
 
 
 

@@ -1,12 +1,12 @@
 Docstrings
 =============
 
-There are several different docstring formats which one can use in order to enable Sphinx's ``autodoc`` 
-extension to automatically generate documentation. For this tutorial we will use the 
-`NumPy <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy>`_, format.
-Other formats include
-`Google <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_ and
-`Sphinx <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_, docstrings.
+To use Sphinx to auto-document your code you need to follow certain docstring formats within your code.
+There are many options and for this tutorial, we will use the
+`NumPy <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy>`_, format. 
+Other formats include `Google <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_
+and `Sphinx <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_, docstrings.
+
 
 NumPy Docstrings example for a function
 --------------------------------------------

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using Markdown with Sphinx &mdash; Sphinx Quick Start Guide  documentation</title>
+  <title>Markdown with Sphinx &mdash; Sphinx Quick Start Guide  documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usefull resources" href="resources.html" />
+    <link rel="next" title="Useful resources" href="resources.html" />
     <link rel="prev" title="Using autodocs" href="api.html" /> 
 </head>
 
@@ -97,8 +97,11 @@
 <li class="toctree-l1"><a class="reference internal" href="docstring.html">Docstrings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="addtoindx.html">Index / Toctree</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">Using autodocs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Markdown with Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Usefull resources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown with Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-markdown-page-to-toctree">Add a Markdown page to toctree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Useful resources</a></li>
 </ul>
 
             
@@ -145,7 +148,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Using Markdown with Sphinx</li>
+      <li>Markdown with Sphinx</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -188,10 +191,10 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="using-markdown-with-sphinx">
-<h1>Using Markdown with Sphinx<a class="headerlink" href="#using-markdown-with-sphinx" title="Permalink to this headline">¶</a></h1>
-<p>You can use Markdown and reStructuredText in the same Sphinx project.
-We support this natively on Read the Docs, and you can do it locally:</p>
+<div class="section" id="markdown-with-sphinx">
+<h1>Markdown with Sphinx<a class="headerlink" href="#markdown-with-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Markdown and reStructuredText can be used in the same Sphinx project.</p>
+<p>If you haven’t done so you’ll first need to install <code class="docutils literal notranslate"><span class="pre">recommonmark</span></code> and add it to your extensions in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install recommonmark
 </pre></div>
 </div>
@@ -207,6 +210,33 @@ basic prose content. reStructuredText is the preferred
 format for technical documentation, please read <a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">this blog post</a>
 for motivation.</p>
 </div>
+<div class="section" id="add-a-markdown-page-to-toctree">
+<h2>Add a Markdown page to toctree<a class="headerlink" href="#add-a-markdown-page-to-toctree" title="Permalink to this headline">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">source/</span></code> folder make a file call <code class="docutils literal notranslate"><span class="pre">mymarkdown.md</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch <span class="sb">``</span>mymarkdown.md<span class="sb">``</span>
+</pre></div>
+</div>
+<p>Open <code class="docutils literal notranslate"><span class="pre">mymarkdown.md</span></code> and add a header and some other conectent</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Governing Equations
+
+The governing equations from Thomas Warner&#39;s book: Numerical Weather and Climate Prediction
+
+$$ \frac{\partial u}{\partial t}=-u \frac{\partial u}{\partial x}-v \frac{\partial u}{\partial y}-w \frac{\partial u}{\partial z}+\frac{u v \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial x}-2 \Omega(w \cos \phi-v \sin \phi)+F r_{x} $$ (2.1)
+
+$$ \frac{\partial v}{\partial t}=-u \frac{\partial v}{\partial x}-v \frac{\partial v}{\partial y}-w \frac{\partial v}{\partial z}-\frac{u^{2} \tan \phi}{a}-\frac{u w}{a}-\frac{1}{\rho} \frac{\partial p}{\partial y}-2 \Omega u \sin \phi+F r_{y} $$ (2.2)
+
+$$ \frac{\partial w}{\partial t}=-u \frac{\partial w}{\partial x}-v \frac{\partial w}{\partial y}-w \frac{\partial w}{\partial z}-\frac{u^{2}+v^{2}}{a}-\frac{1}{\rho} \frac{\partial p}{\partial z}+2 \Omega u \cos \phi-g+F r_{z} $$ (2.3)
+
+$$ \frac{\partial T}{\partial t}=-u \frac{\partial T}{\partial x}-v \frac{\partial T}{\partial y}+\left(\gamma-\gamma_{d}\right) w+\frac{1}{c_{p}} \frac{d H}{d t} $$ (2.4)
+
+$$ \frac{\partial \rho}{\partial t}=-u \frac{\partial \rho}{\partial x}-v \frac{\partial \rho}{\partial y}-w \frac{\partial \rho}{\partial z}-\rho\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right) $$ (2.5)
+
+$$ \frac{\partial q_{v}}{\partial t}=-u \frac{\partial q_{v}}{\partial x}-v \frac{\partial q_{v}}{\partial y}-w \frac{\partial q_{v}}{\partial z}+Q_{v} $$ (2.6)
+
+$$ P=\rho R T $$ (2.7)
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -217,7 +247,7 @@ for motivation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="resources.html" class="btn btn-neutral float-right" title="Usefull resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="resources.html" class="btn btn-neutral float-right" title="Useful resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="api.html" class="btn btn-neutral float-left" title="Using autodocs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
