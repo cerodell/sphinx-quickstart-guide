@@ -35,9 +35,11 @@ In the ``source/`` folder make a file call ``mymarkdown.md``
 
 Open ``mymarkdown.md`` and add a header and some other conectent
 
-This code came from <https://markdown-it.github.io/>
+This code came from https://markdown-it.github.io/
 
 .. code-block::  
+
+    # Example Markdown
 
     # h1 Heading 8-)
     ## h2 Heading
@@ -226,7 +228,6 @@ This code came from <https://markdown-it.github.io/>
 
     [^second]: Footnote text.
 
-    ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
 
 

@@ -1,4 +1,6 @@
-# h1 Heading 8-)
+# Example Markdown
+
+# h1 Heading 
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
@@ -185,4 +187,3 @@ Duplicated footnote reference[^second].
 
 [^second]: Footnote text.
 
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
