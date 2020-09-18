@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Useful resources" href="resources.html" />
+    <link rel="next" title="Governing Equations" href="mymarkdown.html" />
     <link rel="prev" title="Using autodocs" href="api.html" /> 
 </head>
 
@@ -101,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#add-a-markdown-page-to-toctree">Add a Markdown page to toctree</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="mymarkdown.html">Governing Equations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Useful resources</a></li>
 </ul>
 
@@ -213,7 +214,7 @@ for motivation.</p>
 <div class="section" id="add-a-markdown-page-to-toctree">
 <h2>Add a Markdown page to toctree<a class="headerlink" href="#add-a-markdown-page-to-toctree" title="Permalink to this headline">¶</a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">source/</span></code> folder make a file call <code class="docutils literal notranslate"><span class="pre">mymarkdown.md</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch <span class="sb">``</span>mymarkdown.md<span class="sb">``</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch mymarkdown.md
 </pre></div>
 </div>
 <p>Open <code class="docutils literal notranslate"><span class="pre">mymarkdown.md</span></code> and add a header and some other conectent</p>
@@ -236,6 +237,36 @@ $$ \frac{\partial q_{v}}{\partial t}=-u \frac{\partial q_{v}}{\partial x}-v \fra
 $$ P=\rho R T $$ (2.7)
 </pre></div>
 </div>
+<p>Head over to your <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and add <code class="docutils literal notranslate"><span class="pre">mymarkdown</span></code> to the toctree.</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. WFRT-DEMO documentation master file, created by</span>
+sphinx-quickstart on Wed Sep 16 13:47:52 2020.
+You can adapt this file completely to your liking, but it should at least
+contain the root <span class="nv">`toctree`</span> directive.
+
+<span class="gh">Welcome to WFRT-DEMO&#39;s documentation!</span>
+<span class="gh">=====================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="nc">:maxdepth:</span> 2
+<span class="nc">:caption:</span> Contents:
+
+   api
+   mymarkdown
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</div>
+<p>Push this work to <a class="reference external" href="github.com">GitHub</a> and see the new markdown page.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s2">&quot;added mymarkdown to docs&quot;</span>
+git push
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -247,7 +278,7 @@ $$ P=\rho R T $$ (2.7)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="resources.html" class="btn btn-neutral float-right" title="Useful resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mymarkdown.html" class="btn btn-neutral float-right" title="Governing Equations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="api.html" class="btn btn-neutral float-left" title="Using autodocs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

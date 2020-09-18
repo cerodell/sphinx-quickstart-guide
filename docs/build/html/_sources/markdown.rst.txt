@@ -31,7 +31,7 @@ In the ``source/`` folder make a file call ``mymarkdown.md``
 
 .. code-block:: bash 
 
-    touch ``mymarkdown.md``
+    touch mymarkdown.md
 
 Open ``mymarkdown.md`` and add a header and some other conectent
 
@@ -62,3 +62,38 @@ Open ``mymarkdown.md`` and add a header and some other conectent
 
     $$ P=\rho R T $$ (2.7)
 
+
+Head over to your ``index.rst`` and add ``mymarkdown`` to the toctree.
+
+.. code-block:: RST 
+
+    .. WFRT-DEMO documentation master file, created by
+    sphinx-quickstart on Wed Sep 16 13:47:52 2020.
+    You can adapt this file completely to your liking, but it should at least
+    contain the root `toctree` directive.
+
+    Welcome to WFRT-DEMO's documentation!
+    =====================================
+
+    .. toctree::
+    :maxdepth: 2
+    :caption: Contents:
+
+       api
+       mymarkdown
+
+    Indices and tables
+    ==================
+
+    * :ref:`genindex`
+    * :ref:`modindex`
+    * :ref:`search`
+
+
+Push this work to `GitHub <github.com>`_ and see the new markdown page.
+
+.. code-block:: bash 
+
+    git add .
+    git commit -m "added mymarkdown to docs"
+    git push

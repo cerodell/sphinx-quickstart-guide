@@ -34,6 +34,7 @@ What is Sphinx?
    addtoindx
    api
    markdown
+   mymarkdown
    resources
    
    
