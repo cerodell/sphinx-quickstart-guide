@@ -64,4 +64,4 @@ html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 
 html_title = "Sphinx Quick Start Guide"
-html_logo = "_static/img/daftpunktocat-thomas.png"
+html_logo = "_static/img/dojocat.jpg"
