@@ -1,6 +1,8 @@
 Quick Start
 ==============
 
+To run this demo, first start by forking and cloning the :ref:`wfrt-demo. <WFRT Demo>`
+
 A quick start guide showing:
 
 #.  :ref:`How to Install Sphinx. <Installation>`
