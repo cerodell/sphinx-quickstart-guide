@@ -46,6 +46,9 @@ Lets make a new ``rst`` file called ``api.rst`` within our ``soure/`` folder
 
 Lets leave ``api.rst`` blank for now and place it within the toctree
 
+.. warning::
+    When you add ``api`` to the toc-tree...ITS THREE SPACES IN FROM THE LEFT...not a tab or four or two spaces. Its very particular about that. Also you do NOT include the file extension.
+
 .. code-block:: RST
 
     .. WFRT-DEMO documentation master file, created by
