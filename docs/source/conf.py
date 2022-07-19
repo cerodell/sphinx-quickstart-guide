@@ -39,10 +39,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.napoleon",
     "myst_parser",
-    # "myst_nb",
-    # "sphinx_markdown_tables",
-    # "sphinxcontrib.inlinesyntaxhighlight",
-    # "nbsphinx",
+    "nbsphinx",
     "sphinx.ext.mathjax",
 ]
 

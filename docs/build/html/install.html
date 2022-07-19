@@ -30,6 +30,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Repo Setup" href="reposetup.html" />
@@ -159,6 +160,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="resources.html">
    Useful resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="blah.html">
+   Test
   </a>
  </li>
 </ul>
@@ -358,18 +364,9 @@ You can simply run the following command which will install a conda environment 
 <h2>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h2>
 <p>If you dont want a new conda env</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge sphinx
-conda install -c conda-forge jupyter-book
-conda install -c conda-forge sphinx-book-theme
-
-
 conda install -c conda-forge nbsphinx
-conda install -c conda-forge myst-nb
 conda install -c conda-forge myst-parser
-conda install -c conda-forge jupyter-book
-conda install -c conda-forge sphinxcontrib
-conda install -c conda-forge sphinx-automodapi
 conda install -c conda-forge sphinx-book-theme
-conda install -c conda-forge sphinx-autodoc-typehints
 </pre></div>
 </div>
 </div>
@@ -379,10 +376,7 @@ conda install -c conda-forge sphinx-autodoc-typehints
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx
 pip install nbsphinx
 pip install myst-parser
-pip install sphinx-automodapi
 pip install sphinx-book-theme
-pip install sphinx-markdown-tables
-pip install sphinx-autodoc-typehints
 </pre></div>
 </div>
 </div>
