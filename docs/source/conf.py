@@ -17,8 +17,8 @@ sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("../../"))
 
 
-def setup(app):
-    app.add_stylesheet("css/custom.css")
+# def setup(app):
+#     app.add_stylesheet("css/custom.css")
 
 
 # -- Project information -----------------------------------------------------
@@ -38,11 +38,11 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.napoleon",
-    "sphinx_automodapi.automodapi",
-    "recommonmark",
-    "sphinx_markdown_tables",
-    "sphinxcontrib.inlinesyntaxhighlight",
-    "nbsphinx",
+    "myst_parser",
+    # "myst_nb",
+    # "sphinx_markdown_tables",
+    # "sphinxcontrib.inlinesyntaxhighlight",
+    # "nbsphinx",
     "sphinx.ext.mathjax",
 ]
 

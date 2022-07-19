@@ -5,7 +5,7 @@ Markdown and reStructuredText can be used in the same Sphinx project.
 
 If you haven't done so you'll first need to install ``recommonmark`` and add it to your extensions in your ``conf.py``
 
-.. code-block:: bash 
+.. code-block:: bash
 
     pip install recommonmark
 
@@ -29,15 +29,15 @@ Add a Markdown page to toctree
 
 In the ``source/`` folder make a file call ``mymarkdown.md``
 
-.. code-block:: bash 
+.. code-block:: bash
 
     touch mymarkdown.md
 
 Open ``mymarkdown.md`` and add a header and some other conectent
 
-This code came from https://markdown-it.github.io/ 
+This code came from https://markdown-it.github.io/
 
-.. code-block::  
+.. code-block::
 
     # Example Markdown
 
@@ -150,7 +150,7 @@ This code came from https://markdown-it.github.io/
 
 Head over to your ``index.rst`` and add ``mymarkdown`` to the toctree.
 
-.. code-block:: RST 
+.. code-block:: RST
 
     .. WFRT-DEMO documentation master file, created by
     sphinx-quickstart on Wed Sep 16 13:47:52 2020.
@@ -177,7 +177,7 @@ Head over to your ``index.rst`` and add ``mymarkdown`` to the toctree.
 
 Push this work to `GitHub <github.com>`_ and see the new markdown page.
 
-.. code-block:: bash 
+.. code-block:: bash
 
     git add .
     git commit -m "added mymarkdown to docs"
