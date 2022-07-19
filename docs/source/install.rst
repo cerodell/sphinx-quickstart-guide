@@ -26,6 +26,8 @@ If you dont want a new conda env
     conda install -c conda-forge nbsphinx
     conda install -c conda-forge myst-parser
     conda install -c conda-forge sphinx-book-theme
+    conda install -c conda-forge sphinx-copybutton
+
 
 
 
@@ -40,3 +42,4 @@ Or if you like pip
     pip install nbsphinx
     pip install myst-parser
     pip install sphinx-book-theme
+    pip install sphinx-copybutton
