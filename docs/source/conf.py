@@ -34,13 +34,14 @@ author = "Christopher Rodell"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.mathjax",
     "sphinx.ext.autodoc",
     "sphinx.ext.coverage",
-    "sphinx.ext.autosectionlabel",
     "sphinx.ext.napoleon",
-    "myst_parser",
+    "sphinx.ext.autosectionlabel",
     "nbsphinx",
-    "sphinx.ext.mathjax",
+    "myst_parser",
+    "sphinx_copybutton",
 ]
 
 
