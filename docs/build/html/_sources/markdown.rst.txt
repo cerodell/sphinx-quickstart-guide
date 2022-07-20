@@ -175,6 +175,13 @@ Head over to your ``index.rst`` and add ``mymarkdown`` to the toctree.
     * :ref:`search`
 
 
+Lets rebuild our webiste
+
+.. code-block:: bash
+
+    make clean
+    make html
+
 Push this work to `GitHub <github.com>`_ and see the new markdown page.
 
 .. code-block:: bash
