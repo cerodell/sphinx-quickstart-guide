@@ -3,7 +3,7 @@ Using autodocs
 
 For this case, we are going to use ``automodule`` from ``autodocs``
 
-In the ``wfrt-demo`` repo there is a ``foo.py`` file that is well documented using the NumPy docstring formate 
+In the ``wfrt-demo`` repo there is a ``foo.py`` file that is well documented using the NumPy docstring formate
 
 Here is what that script looks like
 
@@ -121,7 +121,7 @@ Here is what that script looks like
 
 
 
-To document this script, all we need to do is go into our ``api.rst`` file and add the following 
+To document this script, all we need to do is go into our ``api.rst`` file and add the following
 
 .. code-block:: RST
 
@@ -132,17 +132,28 @@ To document this script, all we need to do is go into our ``api.rst`` file and a
         :members:
 
 
-Lets rebuild our webiste 
+Lets rebuild our webiste
 
-.. code-block:: bash 
+.. code-block:: bash
 
     make clean
     make html
 
 And this new work to `GitHub <github.com>`_ and see documented code.
 
-.. code-block:: bash 
+.. code-block:: bash
 
     git add .
     git commit -m "added api to docs"
     git push
+
+
+API Example
+---------------
+
+The API webpage will look like this:
+
+.. figure:: _static/img/git-api.png
+    :alt: alternate text
+    :width: 800
+    :align: center
