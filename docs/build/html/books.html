@@ -41,6 +41,8 @@
     <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Useful resources" href="resources.html" />
+    <link rel="prev" title="Math Equations" href="math.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -75,7 +77,7 @@
   Contents:
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="quickstart.html">
    Quick Start
@@ -144,6 +146,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="math.html">
    Math Equations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -223,13 +230,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-theme">
-   Install Theme
+  <a class="reference internal nav-link" href="#install-jupytext">
+   Install jupytext
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#percent-format">
-   Percent format
+  <a class="reference internal nav-link" href="#the-percent-format">
+   The percent format
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -269,11 +276,11 @@
 
   <div class="section" id="jupyter-notebook">
 <h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="install-theme">
-<h2>Install Theme<a class="headerlink" href="#install-theme" title="Permalink to this headline">¶</a></h2>
 <p>Now lets have some fun and add a Jupyter Notebook to our website</p>
+<div class="section" id="install-jupytext">
+<h2>Install jupytext<a class="headerlink" href="#install-jupytext" title="Permalink to this headline">¶</a></h2>
 <p>First, lets install <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/install.html">jupytext</a></p>
-<p>This will allows us to make <cite>.ipynb</cite> files from <cite>.py</cite> using the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#the-percent-format">The percent format</a></p>
+<p>This will allows us to make <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files from <code class="docutils literal notranslate"><span class="pre">.py</span></code> using the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#the-percent-format">percent format</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install jupytext -c conda-forge
 </pre></div>
 </div>
@@ -282,14 +289,17 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="percent-format">
-<h2>Percent format<a class="headerlink" href="#percent-format" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a multiline</span>
+<div class="section" id="the-percent-format">
+<h2>The percent format<a class="headerlink" href="#the-percent-format" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># %% [markdown]</span>
+<span class="c1"># This is a multiline</span>
 <span class="c1"># Markdown cell</span>
 
+<span class="c1"># %% [markdown]</span>
 <span class="c1"># Another Markdown cell</span>
 
 
+<span class="c1"># %%</span>
 <span class="c1"># This is a code cell</span>
 <span class="k">class</span> <span class="nc">A</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">one</span><span class="p">():</span>
@@ -360,6 +370,8 @@ git push
 
         <div class='prev-next-bottom'>
 
+    <a class='left-prev' id="prev-link" href="math.html" title="previous page">Math Equations</a>
+    <a class='right-next' id="next-link" href="resources.html" title="next page">Useful resources</a>
 
         </div>
 

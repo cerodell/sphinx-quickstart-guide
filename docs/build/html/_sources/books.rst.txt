@@ -1,15 +1,17 @@
 Jupyter Notebook
 ==================
 
-Install Theme
----------------------
+
 
 Now lets have some fun and add a Jupyter Notebook to our website
 
+Install jupytext
+---------------------
 
 First, lets install `jupytext <https://jupytext.readthedocs.io/en/latest/install.html>`_
 
-This will allows us to make `.ipynb` files from `.py` using the `The percent format <https://jupytext.readthedocs.io/en/latest/formats.html#the-percent-format>`_
+
+This will allows us to make ``.ipynb`` files from ``.py`` using the `percent format <https://jupytext.readthedocs.io/en/latest/formats.html#the-percent-format>`_
 
 .. code-block:: bash
 
@@ -22,17 +24,20 @@ or
     pip install jupytext --upgrade
 
 
-Percent format
-------------------
+The percent format
+--------------------
 
 .. code-block:: python
 
+  # %% [markdown]
   # This is a multiline
   # Markdown cell
 
+  # %% [markdown]
   # Another Markdown cell
 
 
+  # %%
   # This is a code cell
   class A():
       def one():
