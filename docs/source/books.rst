@@ -30,11 +30,11 @@ The percent format
 .. code-block:: python
 
   # %% [markdown]
-  # This is a multiline
-  # Markdown cell
+  # # A Markdown cell
+  # - You can do all the fun stuff markdown has to offer
 
   # %% [markdown]
-  # Another Markdown cell
+  # ## Another Markdown cell
 
 
   # %%
@@ -45,6 +45,13 @@ The percent format
 
       def two():
           return 2
+
+  # %%
+  # This is another code cell
+  import numpy as np
+
+  mylist = np.arange(0,10)
+  print(f"this is my list {mylist}")
 
 
 

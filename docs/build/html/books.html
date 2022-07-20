@@ -292,11 +292,11 @@
 <div class="section" id="the-percent-format">
 <h2>The percent format<a class="headerlink" href="#the-percent-format" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># %% [markdown]</span>
-<span class="c1"># This is a multiline</span>
-<span class="c1"># Markdown cell</span>
+<span class="c1"># # A Markdown cell</span>
+<span class="c1"># - You can do all the fun stuff markdown has to offer</span>
 
 <span class="c1"># %% [markdown]</span>
-<span class="c1"># Another Markdown cell</span>
+<span class="c1"># ## Another Markdown cell</span>
 
 
 <span class="c1"># %%</span>
@@ -307,6 +307,13 @@
 
     <span class="k">def</span> <span class="nf">two</span><span class="p">():</span>
         <span class="k">return</span> <span class="mi">2</span>
+
+<span class="c1"># %%</span>
+<span class="c1"># This is another code cell</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mylist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;this is my list </span><span class="si">{</span><span class="n">mylist</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
