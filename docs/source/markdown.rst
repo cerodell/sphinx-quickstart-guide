@@ -33,7 +33,7 @@ In the ``source/`` folder make a file call ``mymarkdown.md``
 
     touch mymarkdown.md
 
-Open ``mymarkdown.md`` and add a header and some other conectent
+Open ``mymarkdown.md`` and add a header and some other content
 
 This code came from https://markdown-it.github.io/
 

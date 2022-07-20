@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Useful resources &#8212; Sphinx Quick Start Guide</title>
+    <title>Jupyter Notebook &#8212; Sphinx Quick Start Guide</title>
 
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -41,7 +41,6 @@
     <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Math Equations" href="math.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -76,7 +75,7 @@
   Contents:
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="quickstart.html">
    Quick Start
@@ -147,8 +146,8 @@
    Math Equations
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources.html">
    Useful resources
   </a>
  </li>
@@ -192,7 +191,7 @@
         <!-- ipynb file if we had a myst markdown file -->
 
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/resources.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="_sources/books.rst.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -217,6 +216,49 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
 
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-theme">
+   Install Theme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#percent-format">
+   Percent format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-a-notebook-page-to-toctree">
+   Add a Notebook page to toctree
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-py-to-ipynb">
+     Convert
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .py
+      </span>
+     </code>
+     to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .ipynb
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+
         </div>
     </div>
 </div>
@@ -225,11 +267,91 @@
 
               <div>
 
-  <div class="section" id="useful-resources">
-<h1>Useful resources<a class="headerlink" href="#useful-resources" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#math">reStructuredText Directives</a>
-<a class="reference external" href="https://executablebooks.org/en/latest/">The Executable Books Project</a>
-<a class="reference external" href="https://mathpix.com/">Math Pix</a></p>
+  <div class="section" id="jupyter-notebook">
+<h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-theme">
+<h2>Install Theme<a class="headerlink" href="#install-theme" title="Permalink to this headline">¶</a></h2>
+<p>Now lets have some fun and add a Jupyter Notebook to our website</p>
+<p>First, lets install <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/install.html">jupytext</a></p>
+<p>This will allows us to make <cite>.ipynb</cite> files from <cite>.py</cite> using the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#the-percent-format">The percent format</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install jupytext -c conda-forge
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupytext --upgrade
+</pre></div>
+</div>
+</div>
+<div class="section" id="percent-format">
+<h2>Percent format<a class="headerlink" href="#percent-format" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a multiline</span>
+<span class="c1"># Markdown cell</span>
+
+<span class="c1"># Another Markdown cell</span>
+
+
+<span class="c1"># This is a code cell</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">one</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">two</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-a-notebook-page-to-toctree">
+<h2>Add a Notebook page to toctree<a class="headerlink" href="#add-a-notebook-page-to-toctree" title="Permalink to this headline">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">source/</span></code> folder make a file call <code class="docutils literal notranslate"><span class="pre">mybook.py</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch mybook.py
+</pre></div>
+</div>
+<p>Open <code class="docutils literal notranslate"><span class="pre">mybook.py</span></code> and copy past the Percent format example above to <code class="docutils literal notranslate"><span class="pre">mybook.py</span></code></p>
+<div class="section" id="convert-py-to-ipynb">
+<h3>Convert <code class="docutils literal notranslate"><span class="pre">.py</span></code> to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code><a class="headerlink" href="#convert-py-to-ipynb" title="Permalink to this headline">¶</a></h3>
+<p>In the terminal run the following command to convert <code class="docutils literal notranslate"><span class="pre">.py</span></code> to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupytext --to notebook mybook.py
+</pre></div>
+</div>
+<p>Head back over to your <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> and add <code class="docutils literal notranslate"><span class="pre">mybook.ipynb</span></code> to the toctree.</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="cp">.. WFRT-DEMO documentation master file, created by</span>
+sphinx-quickstart on Wed Sep 16 13:47:52 2020.
+You can adapt this file completely to your liking, but it should at least
+contain the root <span class="nv">`toctree`</span> directive.
+
+<span class="gh">Welcome to WFRT-DEMO&#39;s documentation!</span>
+<span class="gh">=====================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="nc">:maxdepth:</span> 2
+<span class="nc">:caption:</span> Contents:
+
+   api
+   mymarkdown
+   mymath
+   mybook
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</div>
+<p>Lets rebuild our webiste</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make clean
+make html
+</pre></div>
+</div>
+<p>Push this work to <a class="reference external" href="github.com">GitHub</a> and see the new markdown page.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s2">&quot;added mybook to docs&quot;</span>
+git push
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -238,7 +360,6 @@
 
         <div class='prev-next-bottom'>
 
-    <a class='left-prev' id="prev-link" href="math.html" title="previous page">Math Equations</a>
 
         </div>
 

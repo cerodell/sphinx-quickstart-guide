@@ -36,8 +36,9 @@ From Sphinx Homepage:
    markdown
    mymarkdown
    math
+   books
    resources
-   blah
+
 
 
 
