@@ -15,7 +15,8 @@ This will allows us to make ``.ipynb`` files from ``.py`` using the `percent for
 
 .. code-block:: bash
 
-	conda install jupytext -c conda-forge
+	conda install -c conda-forge jupytext
+
 
 or
 

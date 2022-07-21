@@ -23,7 +23,7 @@ If you dont want a new conda env
 .. code-block:: bash
 
     conda install -c conda-forge sphinx
-    conda install jupytext -c conda-forge
+    conda install -c conda-forge jupytext
     conda install -c conda-forge nbsphinx
     conda install -c conda-forge myst-parser
     conda install -c conda-forge sphinx-book-theme
