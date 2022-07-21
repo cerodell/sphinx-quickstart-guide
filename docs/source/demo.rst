@@ -37,7 +37,6 @@ https
 I hope everyone has an `ssh key <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`_ setup with `GitHub <https://github.com/>`_ if not I hope you know your GitHub password and like typing it!
 
 Here is what the repo contains
-*The wfrt.yml will be helpful for the installation processes*
 
 .. code-block:: bash
 
@@ -46,3 +45,6 @@ Here is what the repo contains
     ├── utils
     │   └── foo.py
     └── wfrt.yml
+
+.. note::
+    The ``wfrt.yml`` will be helpful for the installation processes

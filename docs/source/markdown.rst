@@ -3,17 +3,22 @@ Markdown with Sphinx
 
 Markdown and reStructuredText can be used in the same Sphinx project.
 
-If you haven't done so you'll first need to install ``recommonmark`` and add it to your extensions in your ``conf.py``
+If you haven't done so you'll first need to install ``myst_parser`` and add it to your extensions in your ``conf.py``
 
 .. code-block:: bash
 
-    pip install recommonmark
+    conda install -c conda-forge myst-parser
+
+
+.. code-block:: bash
+
+    pip install myst_parser
 
 Then in your ``conf.py``:
 
 .. code-block:: python
 
-   extensions = ['recommonmark']
+   extensions = ['myst_parser']
 
 .. warning:: Markdown doesn't support a lot of the features of Sphinx,
           like inline markup and directives. However, it works for

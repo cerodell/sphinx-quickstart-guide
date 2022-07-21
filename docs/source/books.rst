@@ -21,7 +21,7 @@ or
 
 .. code-block:: bash
 
-    pip install jupytext --upgrade
+    pip install jupytext
 
 
 The percent format
@@ -109,7 +109,7 @@ Head back over to your ``index.rst`` and add ``mybook.ipynb`` to the toctree.
 
 
 .. note::
-    Adding mybook as ``My Book <mybook.ipynb>`` allows you to set a specific header name to the table context. I also did it this way as we have a ``mybook.py`` file, and sphinx gets confused without explicitly defining the file extension.
+    Adding mybook as ``My Book <mybook.ipynb>`` allows you to set a specific header name to the table of contents. I also did it this way as we have a ``mybook.py`` file, and sphinx gets confused without explicitly defining the file extension.
 
 Lets rebuild our webiste
 
